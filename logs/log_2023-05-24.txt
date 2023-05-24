@@ -1,0 +1,38 @@
+Log file for 2023-05-24
+
+13:57:35 - Le programme à démarré.
+
+
+14:16:50 - Le programme s'est éteint.
+
+
+14:16:52 - Le programme à démarré.
+
+
+14:17:31 - Le programme s'est éteint.
+
+
+14:17:33 - Le programme à démarré.
+
+
+14:18:23 - Le programme s'est éteint.
+
+
+14:18:25 - Le programme à démarré.
+
+
+14:18:54 - Le programme s'est éteint.
+
+
+14:27:36 - Le programme à démarré.
+
+
+14:32:04 - Le programme s'est éteint.
+
+
+15:00:00 - Le programme à démarré.
+
+15:02:59 ---------------- >  Alerte HYPO détectée 
+
+17:06:51 - Le programme s'est éteint.
+

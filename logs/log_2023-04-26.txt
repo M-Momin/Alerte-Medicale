@@ -1,0 +1,51 @@
+Log file for 2023-04-26
+
+19:31:16 - Le programme à démarré.
+
+19:39:36 ---------------- >  Alerte HYPO détectée 
+
+19:40:49 - Le programme s'est éteint.
+
+
+19:40:51 - Le programme à démarré.
+
+19:41:31 ---------------- >  Alerte HYPO détectée 
+19:41:34 ---------------- >  Alerte HYPO détectée 
+
+19:42:12 - Le programme s'est éteint.
+
+
+20:11:14 - Le programme à démarré.
+
+20:12:44 ---------------- >  Alerte HYPO détectée 
+20:16:11 ---------------- >  Alerte HYPER détectée
+20:17:12 ---------------- >  Alerte HYPO détectée 
+20:17:13 ---------------- >  Alerte HYPO détectée 
+20:17:26 ---------------- >  Alerte HYPER détectée
+20:17:50 ---------------- >  Alerte HYPER détectée
+
+20:18:50 - Le programme s'est éteint.
+
+
+21:34:06 - Le programme à démarré.
+
+
+22:05:32 - Le programme s'est éteint.
+
+
+22:05:34 - Le programme à démarré.
+
+22:05:45 ---------------- >  Alerte HYPO détectée 
+22:05:48 ---------------- >  Alerte HYPO détectée 
+22:05:51 ---------------- >  Alerte HYPO détectée 
+22:05:54 ---------------- >  Alerte HYPO détectée 
+22:05:59 ---------------- >  Alerte HYPO détectée 
+22:06:57 ---------------- >  Alerte HYPER détectée
+22:08:22 ---------------- >  Alerte HYPO détectée 
+22:08:28 ---------------- >  Alerte HYPO détectée 
+22:08:44 ---------------- >  Alerte HYPO détectée 
+22:09:51 ---------------- >  Alerte HYPO détectée 
+22:10:17 ---------------- >  Alerte HYPO détectée 
+
+22:11:13 - Le programme s'est éteint.
+

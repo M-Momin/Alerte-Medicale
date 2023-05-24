@@ -1,0 +1,125 @@
+Log file for 2023-04-23
+
+15:58:03 - Le programme à démarré.
+
+15:58:13 ---------------- >  Alerte HYPO détectée 
+15:58:26 ---------------- >  Alerte HYPO détectée 
+15:58:29 ---------------- >  Alerte HYPO détectée 
+15:58:32 ---------------- >  Alerte HYPO détectée 
+15:58:34 ---------------- >  Alerte HYPO détectée 
+15:58:48 ---------------- >  Alerte HYPER détectée
+15:59:02 ---------------- >  Alerte HYPER détectée
+15:59:05 ---------------- >  Alerte HYPER détectée
+
+16:03:52 - Le programme s'est éteint.
+
+
+16:03:56 - Le programme à démarré.
+
+
+16:04:27 - Le programme s'est éteint.
+
+
+16:04:29 - Le programme à démarré.
+
+16:04:38 ---------------- >  Alerte HYPO détectée 
+16:04:44 ---------------- >  Alerte HYPO détectée 
+16:04:53 ---------------- >  Alerte HYPO détectée 
+16:04:58 ---------------- >  Alerte HYPO détectée 
+16:05:01 ---------------- >  Alerte HYPO détectée 
+16:06:10 ---------------- >  Alerte HYPER détectée
+
+16:06:25 - Le programme s'est éteint.
+
+
+16:06:28 - Le programme à démarré.
+
+
+16:06:50 - Le programme s'est éteint.
+
+
+16:15:24 - Le programme à démarré.
+
+
+16:40:10 - Le programme s'est éteint.
+
+
+16:40:52 - Le programme à démarré.
+
+16:41:03 ---------------- >  Alerte HYPO détectée 
+16:41:06 ---------------- >  Alerte HYPO détectée 
+16:41:08 ---------------- >  Alerte HYPO détectée 
+16:41:17 ---------------- >  Alerte HYPER détectée
+
+16:41:29 - Le programme s'est éteint.
+
+
+16:41:38 - Le programme à démarré.
+
+16:41:52 ---------------- >  Alerte HYPO détectée 
+16:41:54 ---------------- >  Alerte HYPO détectée 
+16:41:59 ---------------- >  Alerte HYPER détectée
+16:42:05 ---------------- >  Alerte HYPER détectée
+16:42:09 ---------------- >  Alerte HYPER détectée
+17:13:53 ---------------- >  Alerte HYPER détectée
+17:14:00 ---------------- >  Alerte HYPER détectée
+
+17:14:02 - Le programme s'est éteint.
+
+
+18:02:25 - Le programme à démarré.
+
+18:03:35 ---------------- >  Alerte HYPO détectée 
+18:04:00 ---------------- >  Alerte HYPER détectée
+18:09:57 ---------------- >  Alerte HYPER détectée
+18:10:02 ---------------- >  Alerte HYPER détectée
+18:10:22 ---------------- >  Alerte HYPO détectée 
+18:10:27 ---------------- >  Alerte HYPO détectée 
+18:10:30 ---------------- >  Alerte HYPO détectée 
+18:10:42 ---------------- >  Alerte HYPO détectée 
+18:10:54 ---------------- >  Alerte HYPO détectée 
+18:10:56 ---------------- >  Alerte HYPO détectée 
+18:10:59 ---------------- >  Alerte HYPO détectée 
+18:11:06 ---------------- >  Alerte HYPER détectée
+18:11:12 ---------------- >  Alerte HYPER détectée
+
+18:34:55 - Le programme s'est éteint.
+
+
+18:35:03 - Le programme à démarré.
+
+18:36:34 ---------------- >  Alerte HYPO détectée 
+18:36:37 ---------------- >  Alerte HYPO détectée 
+18:36:40 ---------------- >  Alerte HYPO détectée 
+18:36:42 ---------------- >  Alerte HYPO détectée 
+
+18:37:22 - Le programme s'est éteint.
+
+18:37:23 ---------------- >  Alerte HYPER détectée
+
+18:37:25 - Le programme à démarré.
+
+
+18:37:52 - Le programme s'est éteint.
+
+
+18:37:54 - Le programme à démarré.
+
+18:38:19 ---------------- >  Alerte HYPO détectée 
+
+18:38:36 - Le programme s'est éteint.
+
+
+18:38:39 - Le programme à démarré.
+
+18:38:48 ---------------- >  Alerte HYPO détectée 
+18:38:59 ---------------- >  Alerte HYPER détectée
+18:39:07 ---------------- >  Alerte HYPER détectée
+18:39:17 ---------------- >  Alerte HYPO détectée 
+18:39:20 ---------------- >  Alerte HYPO détectée 
+18:39:25 ---------------- >  Alerte HYPO détectée 
+18:39:31 ---------------- >  Alerte HYPO détectée 
+18:39:33 ---------------- >  Alerte HYPO détectée 
+
+18:39:39 - Le programme s'est éteint.
+

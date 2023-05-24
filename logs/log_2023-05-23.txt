@@ -1,0 +1,692 @@
+Log file for 2023-05-23
+
+11:18:39 - Le programme à démarré.
+
+
+11:20:33 - Le programme s'est éteint.
+
+
+11:20:35 - Le programme à démarré.
+
+
+11:21:02 - Le programme s'est éteint.
+
+
+11:21:04 - Le programme à démarré.
+
+
+11:22:38 - Le programme s'est éteint.
+
+
+11:22:40 - Le programme à démarré.
+
+
+11:22:50 - Le programme à démarré.
+
+
+11:23:04 - Le programme s'est éteint.
+
+
+11:23:06 - Le programme à démarré.
+
+
+11:23:23 - Le programme s'est éteint.
+
+
+11:23:25 - Le programme à démarré.
+
+
+11:23:44 - Le programme s'est éteint.
+
+
+11:23:46 - Le programme à démarré.
+
+
+11:23:46 - Le programme à démarré.
+
+
+11:25:17 - Le programme à démarré.
+
+
+11:25:27 - Le programme à démarré.
+
+
+11:25:40 - Le programme à démarré.
+
+
+11:25:58 - Le programme s'est éteint.
+
+
+11:26:00 - Le programme à démarré.
+
+
+11:29:40 - Le programme s'est éteint.
+
+
+11:29:43 - Le programme à démarré.
+
+
+11:30:08 - Le programme s'est éteint.
+
+
+11:30:09 - Le programme à démarré.
+
+
+11:30:26 - Le programme s'est éteint.
+
+
+11:30:39 - Le programme à démarré.
+
+
+11:30:57 - Le programme s'est éteint.
+
+
+11:31:00 - Le programme à démarré.
+
+
+11:35:21 - Le programme s'est éteint.
+
+
+11:35:23 - Le programme à démarré.
+
+
+11:36:02 - Le programme à démarré.
+
+
+11:36:59 - Le programme s'est éteint.
+
+
+11:37:01 - Le programme à démarré.
+
+
+11:37:50 - Le programme s'est éteint.
+
+
+11:37:52 - Le programme à démarré.
+
+
+11:38:16 - Le programme s'est éteint.
+
+
+11:38:21 - Le programme à démarré.
+
+
+11:40:20 - Le programme s'est éteint.
+
+
+11:40:22 - Le programme à démarré.
+
+
+11:40:53 - Le programme s'est éteint.
+
+
+11:40:55 - Le programme à démarré.
+
+
+11:41:05 - Le programme s'est éteint.
+
+
+11:41:07 - Le programme à démarré.
+
+
+11:41:20 - Le programme s'est éteint.
+
+
+11:41:23 - Le programme à démarré.
+
+
+11:41:41 - Le programme s'est éteint.
+
+
+11:41:43 - Le programme à démarré.
+
+
+11:42:55 - Le programme s'est éteint.
+
+
+11:42:57 - Le programme à démarré.
+
+
+11:43:17 - Le programme s'est éteint.
+
+
+11:43:19 - Le programme à démarré.
+
+
+11:43:37 - Le programme s'est éteint.
+
+
+11:43:39 - Le programme à démarré.
+
+
+11:43:45 - Le programme s'est éteint.
+
+
+11:44:27 - Le programme à démarré.
+
+
+11:47:28 - Le programme s'est éteint.
+
+
+11:47:30 - Le programme à démarré.
+
+
+11:47:43 - Le programme s'est éteint.
+
+
+11:47:46 - Le programme à démarré.
+
+
+11:48:02 - Le programme s'est éteint.
+
+
+11:48:04 - Le programme à démarré.
+
+
+11:48:23 - Le programme s'est éteint.
+
+
+11:48:25 - Le programme à démarré.
+
+
+11:48:38 - Le programme s'est éteint.
+
+
+12:00:56 - Le programme à démarré.
+
+
+12:02:07 - Le programme s'est éteint.
+
+
+12:02:09 - Le programme à démarré.
+
+
+12:04:02 - Le programme s'est éteint.
+
+
+12:04:37 - Le programme à démarré.
+
+
+12:04:43 - Le programme à démarré.
+
+
+12:05:05 - Le programme s'est éteint.
+
+
+13:28:24 - Le programme à démarré.
+
+
+13:28:45 - Le programme à démarré.
+
+
+13:30:23 - Le programme à démarré.
+
+
+13:30:59 - Le programme à démarré.
+
+
+13:31:32 - Le programme à démarré.
+
+
+13:34:32 - Le programme à démarré.
+
+
+13:35:13 - Le programme à démarré.
+
+
+13:35:13 - Le programme à démarré.
+
+
+13:37:17 - Le programme à démarré.
+
+
+13:38:07 - Le programme s'est éteint.
+
+
+13:38:09 - Le programme à démarré.
+
+
+13:39:33 - Le programme s'est éteint.
+
+
+13:39:35 - Le programme à démarré.
+
+
+13:40:25 - Le programme à démarré.
+
+
+13:43:35 - Le programme s'est éteint.
+
+
+13:43:36 - Le programme à démarré.
+
+
+13:44:32 - Le programme à démarré.
+
+
+13:46:04 - Le programme à démarré.
+
+
+13:48:36 - Le programme à démarré.
+
+
+13:49:07 - Le programme à démarré.
+
+
+13:50:50 - Le programme à démarré.
+
+
+13:51:22 - Le programme à démarré.
+
+
+13:52:17 - Le programme s'est éteint.
+
+
+13:52:19 - Le programme à démarré.
+
+
+13:53:51 - Le programme s'est éteint.
+
+
+13:53:54 - Le programme à démarré.
+
+
+13:54:20 - Le programme s'est éteint.
+
+
+13:54:22 - Le programme à démarré.
+
+
+13:54:51 - Le programme à démarré.
+
+
+13:55:35 - Le programme à démarré.
+
+
+13:57:34 - Le programme s'est éteint.
+
+
+13:57:35 - Le programme à démarré.
+
+
+13:58:09 - Le programme s'est éteint.
+
+
+13:58:11 - Le programme à démarré.
+
+
+13:59:58 - Le programme s'est éteint.
+
+
+14:00:00 - Le programme à démarré.
+
+
+14:00:59 - Le programme s'est éteint.
+
+
+14:01:01 - Le programme à démarré.
+
+
+14:01:29 - Le programme s'est éteint.
+
+
+14:01:31 - Le programme à démarré.
+
+
+14:02:09 - Le programme s'est éteint.
+
+
+14:02:12 - Le programme à démarré.
+
+
+14:04:01 - Le programme s'est éteint.
+
+
+14:04:03 - Le programme à démarré.
+
+
+14:04:25 - Le programme s'est éteint.
+
+
+14:04:27 - Le programme à démarré.
+
+
+14:05:32 - Le programme s'est éteint.
+
+
+14:05:34 - Le programme à démarré.
+
+
+14:06:07 - Le programme s'est éteint.
+
+
+14:06:09 - Le programme à démarré.
+
+
+14:06:09 - Le programme à démarré.
+
+
+14:07:34 - Le programme à démarré.
+
+
+14:07:54 - Le programme s'est éteint.
+
+
+14:07:55 - Le programme à démarré.
+
+
+14:08:11 - Le programme s'est éteint.
+
+
+14:08:14 - Le programme à démarré.
+
+
+14:08:36 - Le programme s'est éteint.
+
+
+14:08:39 - Le programme à démarré.
+
+
+14:08:57 - Le programme s'est éteint.
+
+
+14:08:59 - Le programme à démarré.
+
+
+14:10:52 - Le programme s'est éteint.
+
+
+14:10:54 - Le programme à démarré.
+
+
+14:11:27 - Le programme s'est éteint.
+
+
+14:11:29 - Le programme à démarré.
+
+
+14:11:50 - Le programme s'est éteint.
+
+
+14:11:54 - Le programme à démarré.
+
+
+14:12:13 - Le programme s'est éteint.
+
+
+14:12:15 - Le programme à démarré.
+
+
+14:12:45 - Le programme s'est éteint.
+
+
+14:12:47 - Le programme à démarré.
+
+
+14:13:08 - Le programme s'est éteint.
+
+
+14:13:55 - Le programme à démarré.
+
+
+14:14:46 - Le programme s'est éteint.
+
+
+14:14:48 - Le programme à démarré.
+
+
+14:15:04 - Le programme s'est éteint.
+
+
+14:15:06 - Le programme à démarré.
+
+
+14:16:05 - Le programme s'est éteint.
+
+
+14:16:07 - Le programme à démarré.
+
+
+14:17:37 - Le programme s'est éteint.
+
+
+14:17:39 - Le programme à démarré.
+
+
+14:18:00 - Le programme à démarré.
+
+
+14:18:13 - Le programme s'est éteint.
+
+
+14:18:15 - Le programme à démarré.
+
+
+14:18:34 - Le programme s'est éteint.
+
+
+14:18:36 - Le programme à démarré.
+
+
+14:20:22 - Le programme s'est éteint.
+
+
+14:20:24 - Le programme à démarré.
+
+
+14:22:04 - Le programme s'est éteint.
+
+
+14:22:06 - Le programme à démarré.
+
+
+14:25:59 - Le programme s'est éteint.
+
+
+14:26:01 - Le programme à démarré.
+
+
+14:26:23 - Le programme s'est éteint.
+
+
+14:26:25 - Le programme à démarré.
+
+
+14:26:49 - Le programme s'est éteint.
+
+
+14:26:51 - Le programme à démarré.
+
+
+14:27:21 - Le programme s'est éteint.
+
+
+14:27:23 - Le programme à démarré.
+
+
+14:27:34 - Le programme s'est éteint.
+
+
+14:27:36 - Le programme à démarré.
+
+
+14:28:41 - Le programme s'est éteint.
+
+
+14:28:43 - Le programme à démarré.
+
+
+14:28:57 - Le programme s'est éteint.
+
+
+14:30:00 - Le programme à démarré.
+
+
+14:30:50 - Le programme s'est éteint.
+
+
+14:30:52 - Le programme à démarré.
+
+
+14:31:54 - Le programme s'est éteint.
+
+
+14:31:56 - Le programme à démarré.
+
+
+14:32:22 - Le programme à démarré.
+
+
+14:33:17 - Le programme s'est éteint.
+
+
+14:33:19 - Le programme à démarré.
+
+
+14:33:38 - Le programme s'est éteint.
+
+
+14:33:41 - Le programme à démarré.
+
+
+14:34:30 - Le programme s'est éteint.
+
+
+14:34:34 - Le programme à démarré.
+
+
+14:35:27 - Le programme s'est éteint.
+
+
+14:35:29 - Le programme à démarré.
+
+
+14:35:47 - Le programme s'est éteint.
+
+
+14:36:11 - Le programme à démarré.
+
+
+14:38:13 - Le programme s'est éteint.
+
+
+14:38:15 - Le programme à démarré.
+
+
+14:38:26 - Le programme s'est éteint.
+
+
+14:38:28 - Le programme à démarré.
+
+
+14:38:36 - Le programme s'est éteint.
+
+
+14:38:38 - Le programme à démarré.
+
+
+14:38:49 - Le programme s'est éteint.
+
+
+14:38:51 - Le programme à démarré.
+
+
+14:39:04 - Le programme s'est éteint.
+
+
+14:39:06 - Le programme à démarré.
+
+
+14:40:46 - Le programme s'est éteint.
+
+
+14:40:48 - Le programme à démarré.
+
+
+14:41:10 - Le programme s'est éteint.
+
+
+14:41:12 - Le programme à démarré.
+
+
+14:41:46 - Le programme s'est éteint.
+
+
+14:41:49 - Le programme à démarré.
+
+
+14:42:48 - Le programme s'est éteint.
+
+
+14:42:49 - Le programme à démarré.
+
+
+14:42:55 - Le programme s'est éteint.
+
+
+14:43:03 - Le programme à démarré.
+
+
+14:43:08 - Le programme s'est éteint.
+
+
+17:28:09 - Le programme à démarré.
+
+
+17:29:59 - Le programme s'est éteint.
+
+
+17:30:01 - Le programme à démarré.
+
+
+17:30:24 - Le programme s'est éteint.
+
+
+17:30:26 - Le programme à démarré.
+
+
+17:30:33 - Le programme s'est éteint.
+
+
+17:30:50 - Le programme à démarré.
+
+17:32:16 ---------------- >  Alerte HYPER détectée
+
+17:32:18 - Le programme s'est éteint.
+
+
+17:32:20 - Le programme à démarré.
+
+
+17:32:54 - Le programme s'est éteint.
+
+
+17:32:57 - Le programme à démarré.
+
+
+17:33:03 - Le programme s'est éteint.
+
+
+17:33:18 - Le programme à démarré.
+
+
+17:33:18 - Le programme à démarré.
+
+
+17:33:31 - Le programme à démarré.
+
+
+17:33:59 - Le programme s'est éteint.
+
+
+17:34:01 - Le programme à démarré.
+
+
+17:35:05 - Le programme s'est éteint.
+
+
+17:35:07 - Le programme à démarré.
+
+
+17:35:59 - Le programme s'est éteint.
+

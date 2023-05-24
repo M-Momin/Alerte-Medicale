@@ -1,0 +1,7 @@
+Log file for 2023-05-07
+
+13:30:56 - Le programme à démarré.
+
+
+13:32:35 - Le programme s'est éteint.
+
