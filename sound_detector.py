@@ -14,7 +14,7 @@ import main
 # Paramètres de la séquence de fréquences à détecter
 target_frequencies_High_SG = [1312, 1410, 1500, 1619, 1722]
 target_frequencies_Low_SG = [1722, 1619, 1500, 1410, 1312]
-threshold = 0.3 # Seuil de corrélation minimum
+threshold = 0.15 # Seuil de corrélation minimum
 
 
 # Paramètres du microphone
@@ -27,7 +27,7 @@ threshold = 0.3 # Seuil de corrélation minimum
 sample_format = pyaudio.paInt16
 channels = 1
 framerate = 7500
-chunk_size = 2048
+chunk_size = 512
 
 
 detected_list_High_SG = [];
@@ -126,7 +126,8 @@ def Low_SG(target, waveform):
 
     # Affichage de la fréquence détectée si la corrélation est suffisante
     if max_correlation >= threshold:
-        if len(detected_list_Low_SG) > 5:
+        print(datetime.datetime.now().strftime("%H:%M:%S"), 'LSG_FR_Detected : {} Hz'.format(max_freq))
+    '''   if len(detected_list_Low_SG) > 5:
             detected_list_Low_SG = []
         if last_freq_Low_SG != max_freq:
             print(datetime.datetime.now().strftime("%H:%M:%S"), 'LSG_FR_Detected : {} Hz'.format(max_freq))
@@ -138,7 +139,7 @@ def Low_SG(target, waveform):
                     #alert_popup = threading.Thread(target=test_alert("Alerte Low SG!", "Ok !", "./images/bg_alert_warning_2.png", "Une alerte LOW SG a été détectée ..."))
                     #alert_popup.start()
                     test_alert("Alerte Low SG!", "Ok !", "./images/bg_alert_warning_2.png", "Une alerte LOW SG a été détectée ...")
-                detected_list_Low_SG = []
+                detected_list_Low_SG = []'''
 
 
 def brain():
@@ -153,7 +154,7 @@ def brain():
 
 
     # Boucle d'enregistrement et de détection de la séquence de fréquences
-    while True:
+    '''while True:
         if mevent.is_set():
             print("set")
         else:
@@ -164,7 +165,7 @@ def brain():
         format_string = '<{}h'.format(chunk_size)
         waveform = struct.unpack(format_string, data)
         
-        High_SG(target_frequencies_High_SG, waveform)
+        #High_SG(target_frequencies_High_SG, waveform)
         Low_SG(target_frequencies_Low_SG, waveform)
         #thread1 = threading.Thread(target=High_SG(target_frequencies_High_SG, waveform))
         #thread2 = threading.Thread(target=Low_SG(target_frequencies_Low_SG, waveform))
@@ -184,4 +185,4 @@ def brain():
     stream.close()
     audio.terminate()
 
-    return 0
+    return 0'''

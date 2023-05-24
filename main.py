@@ -118,11 +118,13 @@ if __name__ == "__main__":
             root.destroy()
 
     # Création de la fenêtre principale
-    #os.system( 'title Alerte Médicale : Gestionnaire' )
-    #cmd = 'color 3F' 
-    #os.system(cmd)
-    #cmd = 'mode 67, 30'
-    #os.system(cmd)
+    os.system('cls')
+
+    os.system( 'title Alerte Médicale : Gestionnaire' )
+    cmd = 'color 3F' 
+    os.system(cmd)
+    cmd = 'mode 67, 30'
+    os.system(cmd)
     print("Running ...")
 
     root = tk.Tk()
