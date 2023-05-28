@@ -33,6 +33,8 @@ target_frequencies_Alert_SG = eval(variables_globales['target_frequencies_Alert_
 
 root_send = 0
 
+first_start = True
+
 event = threading.Event()
 event.clear()
 
@@ -48,83 +50,125 @@ event_kill.clear()
 
 
 if __name__ == "__main__":
-
     logs.create_daily_log()
-    message = "\n" + datetime.datetime.now().strftime("%H:%M:%S") + " - Le programme à démarré.\n"
+    message = "\n" + "[État] : " +datetime.datetime.now().strftime("%H:%M:%S") + " - Le programme à démarré.\n"
     logs.write_daily_log(message)
 
     def long_running_function():
-        
-        # Initialisation de l'enregistrement audio
         audio = pyaudio.PyAudio()
-        info = audio.get_default_input_device_info()
-        stream = audio.open(format=sample_format,
-                            channels=channels,
-                            rate=framerate,
-                            input=True,
-                            frames_per_buffer=chunk_size)
+
+        # Initialisation de l'enregistrement audio
+
+        try:
+            stream = audio.open(format=sample_format,
+                                channels=channels,
+                                rate=framerate,
+                                input=True,
+                                frames_per_buffer=chunk_size)
+        except OSError as e:
+            pass
+
+
+
         while True:
+
             if event_start.is_set():
-                stream.start_stream()
-                event_start.clear()
-                print("Chargement ...")
-                info = audio.get_default_input_device_info()
-                print("Micro utilisé : %s" % info['name'])
-                print("Enregistrement en cours...")
+                try:
+                    stream.start_stream()
+                except (NameError, UnboundLocalError) as e:
+                    pass
+                else:
+                    try:
+                        info = audio.get_default_input_device_info()
+                    except OSError as e:
+                        pass
+                    else:
+                        print("Micro utilisé : %s" % info['name'])
+                        print("Enregistrement en cours...")
+                    event_start.clear()
+
+
 
             if event_stop.is_set():
-                stream.stop_stream()
-                event_stop.clear()
-                print("Enregistrement arrêté.")
+                try:
+                    stream.stop_stream()
+                except (NameError, UnboundLocalError, OSError) as e:
+                    pass
+                else:
+                    event_stop.clear()
+
                 
             if(event_kill.is_set()):
                 break
+
             # Lecture des échantillons audio du microphone
-            data = stream.read(chunk_size)
-            format_string = '<{}h'.format(chunk_size)
-            waveform = struct.unpack(format_string, data)
-            sound_detector.High_SG(target_frequencies_High_SG, waveform,sample_format,channels, float(threshold), chunk_size,framerate)
-            sound_detector.Low_SG(target_frequencies_Low_SG, waveform,sample_format,channels, float(threshold), chunk_size, framerate)
-            sound_detector.Alert_SG(target_frequencies_Alert_SG, waveform,sample_format,channels, float(threshold), chunk_size, framerate)
+            try:
+                data = stream.read(chunk_size)
+                format_string = '<{}h'.format(chunk_size)
+                waveform = struct.unpack(format_string, data)
+                sound_detector.High_SG(target_frequencies_High_SG, waveform,sample_format,channels, float(threshold), chunk_size,framerate)
+                sound_detector.Low_SG(target_frequencies_Low_SG, waveform,sample_format,channels, float(threshold), chunk_size, framerate)
+                sound_detector.Alert_SG(target_frequencies_Alert_SG, waveform,sample_format,channels, float(threshold), chunk_size, framerate)
+
+            except (UnboundLocalError, OSError) as e:
+                if str(e) == "[Errno -9983] Stream is stopped":
+                    surveillance_off("[Erreur] : Aucun périphérique d'entrée disponible.")
+                    message = "\n" + "[ERREUR] : " + datetime.datetime.now().strftime("%H:%M:%S") + " - Aucun périphérique d'entrée disponible.\n"
+                    logs.write_daily_log(message)
+                else:
+                    surveillance_off("[Erreur] : Aucun périphérique d'entrée disponible.")
+                
+
             event.wait()
                 
         # Arrêt de l'enregistrement audio
-        stream.stop_stream()
-        stream.close()
-        audio.terminate()
+        try:
+            stream.stop_stream()
+            stream.close()
+            audio.terminate()
+        except UnboundLocalError:
+            pass
 
         return 0
 
     # Définition de la fonction à exécuter lorsque le bouton est cliqué
     def surveillance_on():
+        global first_start
+        tools.clear()
+        print("La surveillance est active ! \n\n")
+
         event.set()
+        event_stop.clear()
         event_start.set()
- 
+        
         root.configure(bg="green")
         # Création d'une nouvelle thread pour exécuter la fonction
-        t = threading.Thread(target=long_running_function)
-        t.start()
+        if(first_start == True):
+            t = threading.Thread(target=long_running_function)
+            t.start()
+            first_start= False
         surveillance_btn.configure(text = "Désactivé\nSurveillance  ", command=surveillance_off)
         state_label.configure(text="✔️ Surveillance ON", fg="green", bg="#d6f5d6")
-        if platform.system() == "Windows":
-            os.system('cls')
-        if platform.system() == "Linux":
-            os.system('clear')
-        print("La surveillance a été activée. \n\n En cours d'écoute ... \n\n")
 
-    def surveillance_off():
+        
+
+
+    def surveillance_off(error =""):
+        tools.clear()
+
+        if(error != ""):
+            print(error + "\n")
+        print("La surveillance est désactivée ! \n\n")
+
         event.clear()
+        event_start.clear()
         event_stop.set()
         
         root.configure(bg="#ff704d")
         surveillance_btn.configure(text = "Activé\nSurveillance  ", command=surveillance_on)
         state_label.configure(text="❌ Surveillance OFF", fg="red", bg="#ffd6cc")
-
-        if platform.system() == "Windows":
-            os.system('cls')
-        if platform.system() == "Linux":
-            os.system('clear')
-        print("La surveillance a été désactivée. \n\n")
+        
+        
 
     def set_threshold_value(new_value):
         global threshold
@@ -133,20 +177,19 @@ if __name__ == "__main__":
     def quitWin():
         res = messagebox.askyesno('Quitter ?', 'Voulez-vous quitter l\'application?') 
         if res == True:
-            message = '\n' + datetime.datetime.now().strftime("%H:%M:%S") + " - Le programme s'est éteint.\n"
+            message = '\n' + "[État] : " + datetime.datetime.now().strftime("%H:%M:%S") + " - Le programme s'est éteint.\n"
             logs.write_daily_log(message)
             event_kill.set()
             event.set()
             root.destroy()
-
         elif res == False:
             pass
         else:
-            messagebox.showerror('error', 'something went wrong!')
+            messagebox.showerror('error', 'Un problème est survenu!')
 
     def on_closing():
         if messagebox.askokcancel("Quit", "Voulez-vous vraiment quitter ?"):
-            essage = '\n' + datetime.datetime.now().strftime("%H:%M:%S") + " - Le programme s'est éteint.\n"
+            message = '\n' + "[État] : " + datetime.datetime.now().strftime("%H:%M:%S") + " - Le programme s'est éteint.\n"
             logs.write_daily_log(message)
             event_kill.set()
             event.set()
@@ -163,11 +206,10 @@ if __name__ == "__main__":
         os.system(cmd)
         cmd = 'mode 67, 30'
         os.system(cmd)
-
     if platform.system() == "Linux":
         os.system('clear')
 
-    print("Running ...")
+    print("En attente ...")
 
 
 
@@ -192,7 +234,7 @@ if __name__ == "__main__":
     image_power = image_power.resize((30, 30)) 
     photo_power = ImageTk.PhotoImage(image_power)
     # Création du bouton
-    surveillance_btn = Button(root, text="Activé\nSurveillance  ", image=photo_power, width=160, height=50, compound="right", font=("Helvetica", 12), command=surveillance_on, highlightbackground="red", highlightcolor="yellow")
+    surveillance_btn = Button(root, text="Activé\nSurveillance  ", image=photo_power, width=160, height=50, compound="right", font=("Helvetica", 12), command=surveillance_on, highlightcolor="yellow")
     # Configuration du style personnalisé
     surveillance_btn.configure(bg="#eff5f5", fg="black", borderwidth=1, relief="solid")
     # Placement du bouton
@@ -202,7 +244,7 @@ if __name__ == "__main__":
     image_history = Image.open("./images/history.png")
     image_history = image_history.resize((25, 25)) 
     photo_history = ImageTk.PhotoImage(image_history)
-    logs_btn = Button(root, text="Historique     ", width=160, height=50,compound="right", image=photo_history, font=("Helvetica", 12), command=lambda: tools.open_folder('.\logs'))
+    logs_btn = Button(root, text="Historique     ", width=160, height=50,compound="right", image=photo_history, font=("Helvetica", 12), command=lambda: tools.open_folder('logs'))
     logs_btn.configure(bg="#eff5f5", fg="black", borderwidth=1, relief="solid")
     logs_btn.pack(pady=15)
     logs_btn.place(x=300, y=275)
@@ -223,7 +265,7 @@ if __name__ == "__main__":
     image_volume = Image.open("./images/volume.png")
     image_volume = image_volume.resize((15, 15)) 
     photo_volume = ImageTk.PhotoImage(image_volume)
-    test_LOW_btn = Button(root, text="Alarme Hypo   ", width=120, height=30, font=("Helvetica", 10),compound="right", image=photo_volume, command=lambda: tools.play_sound('./alarmes/LOW.mp3'))
+    test_LOW_btn = Button(root, text="Alarme Hypo   ", width=120, height=30, font=("Helvetica", 10),compound="right", image=photo_volume, command=lambda: tools.play_sound('./alarmes/LOW.wav'))
     test_LOW_btn.configure(bg="#eff5f5", fg="black", borderwidth=1, relief="solid")
     test_LOW_btn.pack(pady=15)
     test_LOW_btn.place(x=700, y=240)
@@ -252,7 +294,7 @@ if __name__ == "__main__":
     # Afficher le curseur
     threshold_scale.set(threshold*1000)
     threshold_scale.pack()
-    threshold_scale.place(x=480, y=200)
+    threshold_scale.place(x=510, y=200)
 
     # Lancement de la boucle principale de tkinter pour afficher la fenêtre
     root.protocol("WM_DELETE_WINDOW", on_closing)

@@ -152,3 +152,675 @@ Log file for 2023-05-28
 
 15:29:51 - Le programme s'est éteint.
 
+
+15:37:34 - Le programme à démarré.
+
+
+15:40:10 - Le programme s'est éteint.
+
+
+15:40:12 - Le programme à démarré.
+
+
+16:03:35 - Le programme s'est éteint.
+
+
+16:03:37 - Le programme à démarré.
+
+16:20:08 ---------------- >  Alerte URGENTE détectée 
+16:20:09 ---------------- >  Alerte URGENTE détectée 
+16:20:10 ---------------- >  Alerte URGENTE détectée 
+16:20:11 ---------------- >  Alerte URGENTE détectée 
+16:20:13 ---------------- >  Alerte URGENTE détectée 
+16:20:14 ---------------- >  Alerte URGENTE détectée 
+16:20:20 ---------------- >  Alerte URGENTE détectée 
+16:21:17 ---------------- >  Alerte HYPO détectée 
+16:21:29 ---------------- >  Alerte HYPO détectée 
+16:21:32 ---------------- >  Alerte HYPO détectée 
+16:21:47 ---------------- >  Alerte HYPO détectée 
+16:21:50 ---------------- >  Alerte HYPO détectée 
+16:21:54 ---------------- >  Alerte HYPER détectée
+16:21:57 ---------------- >  Alerte HYPER détectée
+16:21:59 ---------------- >  Alerte HYPER détectée
+16:22:02 ---------------- >  Alerte HYPER détectée
+16:22:05 ---------------- >  Alerte URGENTE détectée 
+16:22:05 ---------------- >  Alerte URGENTE détectée 
+16:22:07 ---------------- >  Alerte URGENTE détectée 
+16:22:08 ---------------- >  Alerte URGENTE détectée 
+16:22:10 ---------------- >  Alerte URGENTE détectée 
+16:22:15 ---------------- >  Alerte HYPER détectée
+16:22:20 ---------------- >  Alerte HYPER détectée
+16:22:23 ---------------- >  Alerte HYPER détectée
+16:22:29 ---------------- >  Alerte HYPO détectée 
+16:22:35 ---------------- >  Alerte HYPO détectée 
+16:22:38 ---------------- >  Alerte URGENTE détectée 
+16:22:39 ---------------- >  Alerte URGENTE détectée 
+16:22:41 ---------------- >  Alerte URGENTE détectée 
+16:22:43 ---------------- >  Alerte URGENTE détectée 
+16:22:47 ---------------- >  Alerte HYPER détectée
+16:22:53 ---------------- >  Alerte HYPER détectée
+16:22:56 ---------------- >  Alerte HYPER détectée
+16:22:58 ---------------- >  Alerte HYPO détectée 
+16:23:06 ---------------- >  Alerte HYPO détectée 
+16:23:38 ---------------- >  Alerte HYPER détectée
+16:23:41 ---------------- >  Alerte HYPER détectée
+16:23:44 ---------------- >  Alerte HYPER détectée
+16:23:46 ---------------- >  Alerte URGENTE détectée 
+16:23:48 ---------------- >  Alerte URGENTE détectée 
+16:23:56 ---------------- >  Alerte HYPO détectée 
+16:24:01 ---------------- >  Alerte HYPO détectée 
+16:24:08 ---------------- >  Alerte HYPER détectée
+16:24:14 ---------------- >  Alerte HYPER détectée
+16:24:16 ---------------- >  Alerte HYPER détectée
+16:24:19 ---------------- >  Alerte URGENTE détectée 
+16:24:21 ---------------- >  Alerte URGENTE détectée 
+16:24:22 ---------------- >  Alerte URGENTE détectée 
+16:24:27 ---------------- >  Alerte URGENTE détectée 
+16:24:35 ---------------- >  Alerte URGENTE détectée 
+16:24:38 ---------------- >  Alerte URGENTE détectée 
+16:24:42 ---------------- >  Alerte URGENTE détectée 
+16:24:54 ---------------- >  Alerte HYPER détectée
+16:24:58 ---------------- >  Alerte HYPO détectée 
+16:25:44 ---------------- >  Alerte URGENTE détectée 
+16:26:03 ---------------- >  Alerte HYPO détectée 
+16:26:08 ---------------- >  Alerte HYPO détectée 
+16:27:10 ---------------- >  Alerte HYPER détectée
+16:27:15 ---------------- >  Alerte HYPER détectée
+16:27:18 ---------------- >  Alerte HYPER détectée
+16:27:20 ---------------- >  Alerte HYPER détectée
+16:27:23 ---------------- >  Alerte HYPO détectée 
+16:27:25 ---------------- >  Alerte URGENTE détectée 
+16:27:28 ---------------- >  Alerte URGENTE détectée 
+16:27:29 ---------------- >  Alerte URGENTE détectée 
+16:27:31 ---------------- >  Alerte URGENTE détectée 
+16:27:42 ---------------- >  Alerte HYPER détectée
+
+16:28:11 - Le programme s'est éteint.
+
+
+16:28:57 - Le programme à démarré.
+
+
+16:29:01 - Le programme s'est éteint.
+
+
+16:29:59 - Le programme à démarré.
+
+16:30:56 ---------------- >  Alerte HYPO détectée 
+16:31:01 ---------------- >  Alerte HYPER détectée
+16:31:06 ---------------- >  Alerte HYPER détectée
+16:31:26 ---------------- >  Alerte URGENTE détectée 
+16:31:27 ---------------- >  Alerte URGENTE détectée 
+16:31:29 ---------------- >  Alerte URGENTE détectée 
+16:31:34 ---------------- >  Alerte URGENTE détectée 
+16:31:36 ---------------- >  Alerte URGENTE détectée 
+16:31:41 ---------------- >  Alerte URGENTE détectée 
+16:31:43 ---------------- >  Alerte URGENTE détectée 
+
+16:31:52 - Le programme s'est éteint.
+
+
+16:34:03 - Le programme à démarré.
+
+
+16:37:15 - Le programme s'est éteint.
+
+
+16:42:10 - Le programme à démarré.
+
+16:42:37 ---------------- >  Alerte HYPO détectée 
+
+16:43:37 - Le programme s'est éteint.
+
+
+16:43:39 - Le programme à démarré.
+
+
+16:44:29 - Le programme s'est éteint.
+
+
+16:44:51 - Le programme à démarré.
+
+
+16:46:15 - Le programme s'est éteint.
+
+
+16:46:17 - Le programme à démarré.
+
+16:46:57 ---------------- >  Alerte HYPO détectée 
+16:47:00 ---------------- >  Alerte HYPO détectée 
+
+16:47:25 - Le programme s'est éteint.
+
+
+16:47:27 - Le programme à démarré.
+
+16:48:17 ---------------- >  Alerte HYPO détectée 
+16:48:19 ---------------- >  Alerte HYPO détectée 
+16:48:22 ---------------- >  Alerte HYPO détectée 
+16:48:26 ---------------- >  Alerte HYPER détectée
+16:48:29 ---------------- >  Alerte HYPER détectée
+16:48:37 ---------------- >  Alerte URGENTE détectée 
+16:48:39 ---------------- >  Alerte URGENTE détectée 
+16:48:40 ---------------- >  Alerte URGENTE détectée 
+16:48:43 ---------------- >  Alerte URGENTE détectée 
+16:48:46 ---------------- >  Alerte URGENTE détectée 
+16:48:48 ---------------- >  Alerte URGENTE détectée 
+16:48:50 ---------------- >  Alerte URGENTE détectée 
+16:48:54 ---------------- >  Alerte HYPER détectée
+16:48:57 ---------------- >  Alerte HYPER détectée
+16:48:59 ---------------- >  Alerte HYPER détectée
+16:49:04 ---------------- >  Alerte HYPO détectée 
+16:49:10 ---------------- >  Alerte HYPO détectée 
+16:49:18 ---------------- >  Alerte HYPO détectée 
+16:49:20 ---------------- >  Alerte HYPO détectée 
+16:49:23 ---------------- >  Alerte HYPO détectée 
+16:49:30 ---------------- >  Alerte HYPO détectée 
+16:49:36 ---------------- >  Alerte HYPO détectée 
+16:49:46 ---------------- >  Alerte HYPER détectée
+
+16:51:22 - Le programme s'est éteint.
+
+
+16:53:20 - Le programme à démarré.
+
+16:53:35 ---------------- >  Alerte HYPO détectée 
+16:53:38 ---------------- >  Alerte HYPO détectée 
+
+16:53:41 - Le programme s'est éteint.
+
+
+16:54:18 - Le programme à démarré.
+
+
+16:55:47 - Le programme s'est éteint.
+
+
+16:55:51 - Le programme à démarré.
+
+16:55:59 ---------------- >  Alerte HYPO détectée 
+16:56:01 ---------------- >  Alerte HYPO détectée 
+16:56:07 ---------------- >  Alerte HYPO détectée 
+16:56:11 ---------------- >  Alerte HYPER détectée
+16:56:16 ---------------- >  Alerte HYPER détectée
+16:56:30 ---------------- >  Alerte HYPO détectée 
+16:56:36 ---------------- >  Alerte URGENTE détectée 
+16:56:37 ---------------- >  Alerte URGENTE détectée 
+16:57:02 ---------------- >  Alerte HYPO détectée 
+16:57:08 ---------------- >  Alerte HYPO détectée 
+16:57:12 ---------------- >  Alerte URGENTE détectée 
+16:57:14 ---------------- >  Alerte URGENTE détectée 
+16:57:16 ---------------- >  Alerte URGENTE détectée 
+16:57:18 ---------------- >  Alerte URGENTE détectée 
+
+17:03:11 - Le programme s'est éteint.
+
+
+17:03:13 - Le programme à démarré.
+
+17:03:25 ---------------- >  Alerte HYPO détectée 
+
+17:06:05 - Le programme à démarré.
+
+
+17:06:32 - Le programme s'est éteint.
+
+
+17:07:20 - Le programme à démarré.
+
+
+17:08:11 - Le programme s'est éteint.
+
+
+17:08:15 - Le programme à démarré.
+
+17:08:22 ---------------- >  Alerte HYPO détectée 
+
+17:11:39 - Le programme s'est éteint.
+
+
+17:11:42 - Le programme à démarré.
+
+17:11:53 ---------------- >  Alerte HYPO détectée 
+17:12:01 ---------------- >  Alerte HYPO détectée 
+17:12:10 ---------------- >  Alerte HYPO détectée 
+17:12:27 ---------------- >  Alerte HYPER détectée
+17:12:30 ---------------- >  Alerte HYPER détectée
+17:12:34 ---------------- >  Alerte URGENTE détectée 
+17:12:38 ---------------- >  Alerte URGENTE détectée 
+17:12:40 ---------------- >  Alerte URGENTE détectée 
+17:12:52 ---------------- >  Alerte HYPO détectée 
+17:13:34 ---------------- >  Alerte HYPO détectée 
+17:13:37 ---------------- >  Alerte HYPO détectée 
+
+17:13:55 - Le programme s'est éteint.
+
+
+17:13:57 - Le programme à démarré.
+
+17:14:09 ---------------- >  Alerte HYPO détectée 
+17:14:11 ---------------- >  Alerte HYPO détectée 
+17:14:14 ---------------- >  Alerte HYPO détectée 
+17:14:17 ---------------- >  Alerte HYPO détectée 
+17:14:27 ---------------- >  Alerte HYPO détectée 
+17:14:30 ---------------- >  Alerte HYPO détectée 
+17:14:36 ---------------- >  Alerte HYPER détectée
+17:14:38 ---------------- >  Alerte HYPER détectée
+17:14:41 ---------------- >  Alerte HYPER détectée
+17:14:44 ---------------- >  Alerte HYPER détectée
+17:15:15 ---------------- >  Alerte HYPO détectée 
+
+17:15:44 - Le programme s'est éteint.
+
+
+17:15:47 - Le programme à démarré.
+
+17:15:55 ---------------- >  Alerte HYPO détectée 
+17:16:05 ---------------- >  Alerte HYPO détectée 
+17:16:14 ---------------- >  Alerte HYPO détectée 
+17:16:24 ---------------- >  Alerte HYPO détectée 
+17:16:33 ---------------- >  Alerte HYPO détectée 
+17:16:36 ---------------- >  Alerte HYPO détectée 
+17:16:38 ---------------- >  Alerte HYPO détectée 
+
+17:16:53 - Le programme s'est éteint.
+
+
+17:17:41 - Le programme à démarré.
+
+
+17:18:30 - Le programme s'est éteint.
+
+
+17:18:32 - Le programme à démarré.
+
+
+17:18:58 - Le programme s'est éteint.
+
+
+17:19:00 - Le programme à démarré.
+
+
+17:19:50 - Le programme s'est éteint.
+
+
+17:19:52 - Le programme à démarré.
+
+
+17:20:27 - Le programme s'est éteint.
+
+
+17:20:29 - Le programme à démarré.
+
+
+17:20:56 - Le programme s'est éteint.
+
+
+17:20:58 - Le programme à démarré.
+
+17:22:06 ---------------- >  Alerte HYPO détectée 
+
+17:23:35 - Le programme s'est éteint.
+
+
+17:23:37 - Le programme à démarré.
+
+
+17:24:03 - Le programme s'est éteint.
+
+
+17:24:05 - Le programme à démarré.
+
+17:24:24 ---------------- >  Alerte HYPO détectée 
+17:24:27 ---------------- >  Alerte HYPO détectée 
+17:24:36 ---------------- >  Alerte HYPO détectée 
+
+17:25:58 - Le programme s'est éteint.
+
+
+17:26:00 - Le programme à démarré.
+
+
+17:26:26 - Le programme s'est éteint.
+
+
+17:26:43 - Le programme à démarré.
+
+
+17:27:20 - Le programme s'est éteint.
+
+
+17:27:22 - Le programme à démarré.
+
+
+17:27:33 - Le programme s'est éteint.
+
+
+17:28:26 - Le programme à démarré.
+
+
+17:28:57 - Le programme s'est éteint.
+
+
+17:28:59 - Le programme à démarré.
+
+
+17:34:08 - Le programme à démarré.
+
+
+17:35:57 - Le programme s'est éteint.
+
+
+17:36:14 - Le programme à démarré.
+
+
+17:37:41 - Le programme s'est éteint.
+
+
+17:37:43 - Le programme à démarré.
+
+
+17:37:52 - Le programme s'est éteint.
+
+
+17:37:54 - Le programme à démarré.
+
+
+17:38:56 - Le programme s'est éteint.
+
+
+17:39:12 - Le programme à démarré.
+
+
+17:39:18 - Le programme s'est éteint.
+
+
+17:40:42 - Le programme à démarré.
+
+
+17:41:21 - Le programme à démarré.
+
+
+17:42:00 - Le programme à démarré.
+
+
+17:42:37 - Le programme à démarré.
+
+
+17:43:11 - Le programme à démarré.
+
+
+17:44:36 - Le programme à démarré.
+
+17:44:50 ---------------- >  Alerte HYPO détectée 
+17:44:53 ---------------- >  Alerte HYPO détectée 
+
+17:45:33 - Le programme s'est éteint.
+
+
+17:46:31 - Le programme à démarré.
+
+
+17:47:37 - Le programme s'est éteint.
+
+
+17:47:39 - Le programme à démarré.
+
+17:47:55 ---------------- >  Alerte HYPO détectée 
+
+17:48:30 - Le programme s'est éteint.
+
+
+17:48:31 - Le programme à démarré.
+
+17:48:57 ---------------- >  Alerte HYPER détectée
+17:49:18 ---------------- >  Alerte HYPER détectée
+17:49:21 ---------------- >  Alerte HYPER détectée
+17:49:36 ---------------- >  Alerte HYPER détectée
+17:49:39 ---------------- >  Alerte HYPER détectée
+17:49:41 ---------------- >  Alerte HYPER détectée
+17:49:49 ---------------- >  Alerte HYPO détectée 
+17:50:00 ---------------- >  Alerte HYPER détectée
+17:50:02 ---------------- >  Alerte HYPER détectée
+17:50:08 ---------------- >  Alerte HYPER détectée
+
+17:50:12 - Le programme s'est éteint.
+
+
+17:51:29 - Le programme à démarré.
+
+17:51:59 ---------------- >  Alerte URGENTE détectée 
+17:52:01 ---------------- >  Alerte URGENTE détectée 
+17:52:03 ---------------- >  Alerte URGENTE détectée 
+17:52:05 ---------------- >  Alerte URGENTE détectée 
+
+17:52:07 - Le programme s'est éteint.
+
+
+[État] : 17:57:54 - Le programme à démarré.
+
+
+[État] : 18:01:12 - Le programme s'est éteint.
+
+
+[État] : 18:01:13 - Le programme à démarré.
+
+
+[État] : 18:02:50 - Le programme s'est éteint.
+
+
+[État] : 18:02:53 - Le programme à démarré.
+
+
+[État] : 18:03:58 - Le programme s'est éteint.
+
+
+[État] : 18:04:00 - Le programme à démarré.
+
+
+[État] : 18:04:15 - Le programme s'est éteint.
+
+
+[État] : 18:04:44 - Le programme à démarré.
+
+
+[État] : 18:06:03 - Le programme s'est éteint.
+
+
+[État] : 18:06:05 - Le programme à démarré.
+
+
+[État] : 18:07:30 - Le programme s'est éteint.
+
+
+[État] : 18:07:33 - Le programme à démarré.
+
+
+[État] : 18:10:39 - Le programme s'est éteint.
+
+
+[État] : 18:10:41 - Le programme à démarré.
+
+
+[État] : 18:11:54 - Le programme s'est éteint.
+
+
+[État] : 18:11:56 - Le programme à démarré.
+
+
+[État] : 18:12:10 - Le programme s'est éteint.
+
+
+[État] : 18:12:12 - Le programme à démarré.
+
+
+[État] : 18:14:15 - Le programme s'est éteint.
+
+
+[État] : 18:14:41 - Le programme à démarré.
+
+
+[État] : 18:15:04 - Le programme s'est éteint.
+
+
+[État] : 18:15:07 - Le programme à démarré.
+
+
+[État] : 18:17:10 - Le programme s'est éteint.
+
+
+[État] : 18:17:12 - Le programme à démarré.
+
+
+[État] : 18:20:00 - Le programme s'est éteint.
+
+
+[État] : 18:20:02 - Le programme à démarré.
+
+
+[État] : 18:24:26 - Le programme s'est éteint.
+
+
+[État] : 18:24:28 - Le programme à démarré.
+
+
+[État] : 18:25:47 - Le programme s'est éteint.
+
+
+[État] : 18:26:24 - Le programme à démarré.
+
+
+[État] : 18:26:41 - Le programme s'est éteint.
+
+
+[État] : 18:26:54 - Le programme à démarré.
+
+
+[État] : 18:28:16 - Le programme s'est éteint.
+
+
+[État] : 18:28:19 - Le programme à démarré.
+
+
+[État] : 18:28:45 - Le programme s'est éteint.
+
+
+[État] : 18:28:47 - Le programme à démarré.
+
+18:29:05 ---------------- >  Alerte HYPO détectée 
+18:29:17 ---------------- >  Alerte HYPO détectée 
+
+[État] : 18:29:32 - Le programme s'est éteint.
+
+
+[État] : 18:31:10 - Le programme à démarré.
+
+
+[État] : 18:31:41 - Le programme s'est éteint.
+
+
+[État] : 18:31:44 - Le programme à démarré.
+
+18:31:53 ---------------- >  Alerte HYPO détectée 
+18:32:04 ---------------- >  Alerte HYPO détectée 
+18:32:08 ---------------- >  Alerte HYPER détectée
+18:32:10 ---------------- >  Alerte HYPER détectée
+18:32:13 ---------------- >  Alerte HYPER détectée
+
+[État] : 18:33:23 - Le programme s'est éteint.
+
+
+[État] : 18:33:25 - Le programme à démarré.
+
+
+[État] : 18:33:47 - Le programme s'est éteint.
+
+
+[État] : 18:33:49 - Le programme à démarré.
+
+18:33:59 ---------------- >  Alerte HYPO détectée 
+18:34:04 ---------------- >  Alerte HYPO détectée 
+
+[État] : 18:35:16 - Le programme s'est éteint.
+
+
+[État] : 18:35:18 - Le programme à démarré.
+
+
+[État] : 18:35:38 - Le programme s'est éteint.
+
+
+[État] : 18:35:40 - Le programme à démarré.
+
+
+[État] : 18:38:09 - Le programme s'est éteint.
+
+
+[État] : 18:38:11 - Le programme à démarré.
+
+
+[État] : 18:38:27 - Le programme s'est éteint.
+
+
+[État] : 18:42:18 - Le programme à démarré.
+
+
+[État] : 18:42:39 - Le programme s'est éteint.
+
+
+[État] : 18:42:46 - Le programme à démarré.
+
+
+[État] : 18:43:19 - Le programme s'est éteint.
+
+
+[État] : 18:43:21 - Le programme à démarré.
+
+
+[État] : 18:43:41 - Le programme s'est éteint.
+
+
+[État] : 18:43:46 - Le programme à démarré.
+
+
+[État] : 18:43:50 - Le programme s'est éteint.
+
+
+[État] : 18:47:26 - Le programme à démarré.
+
+
+[État] : 18:49:00 - Le programme s'est éteint.
+
+
+[État] : 18:49:03 - Le programme à démarré.
+
+
+[État] : 18:49:20 - Le programme s'est éteint.
+
+
+[État] : 18:51:16 - Le programme à démarré.
+
+
+[État] : 18:52:00 - Le programme s'est éteint.
+
+
+[État] : 18:52:03 - Le programme à démarré.
+
+18:52:27 ---------------- >  Alerte URGENTE détectée 
+18:52:33 ---------------- >  Alerte URGENTE détectée 
+18:52:39 ---------------- >  Alerte URGENTE détectée 
+
+[État] : 18:53:46 - Le programme s'est éteint.
+
+
+[État] : 18:54:28 - Le programme à démarré.
+
+
+[État] : 18:54:36 - Le programme s'est éteint.
+
+
+[État] : 18:55:23 - Le programme à démarré.
+
+
+[État] : 18:55:27 - Le programme s'est éteint.
+

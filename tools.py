@@ -32,4 +32,8 @@ def open_folder(path):
     if platform.system() == "Linux":
         os.system(f"xdg-open {path}")
 
-
+def clear():
+    if platform.system() == "Windows":
+        os.system('cls')
+    if platform.system() == "Linux":
+        os.system('clear')
