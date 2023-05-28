@@ -20,15 +20,7 @@ import struct
 variables_globales = tools.read_params()
 
 # Définir les paramètres audio
-global sample_format, channels, framerate, chunk_size, threshold, target_frequencies_High_SG, target_frequencies_Low_SG
-'''sample_format = pyaudio.paInt16
-channels = 1
-framerate = 7500
-chunk_size = 256
-threshold = 0.035 
-# Paramètres de la séquence de fréquences à détecter
-target_frequencies_High_SG = [1312, 1410, 1500, 1619, 1722]
-target_frequencies_Low_SG = [1722, 1619, 1500, 1410, 1312]'''
+global sample_format, channels, framerate, chunk_size, threshold, target_frequencies_High_SG, target_frequencies_Low_SG, target_frequencies_Alert_SG
 
 sample_format = pyaudio.paInt16
 channels = int(variables_globales['channels'])
@@ -37,6 +29,7 @@ chunk_size = int(variables_globales['chunk_size'])
 threshold = float(variables_globales['threshold'])/1000
 target_frequencies_High_SG = eval(variables_globales['target_frequencies_High_SG'])
 target_frequencies_Low_SG = eval(variables_globales['target_frequencies_Low_SG'])
+target_frequencies_Alert_SG = eval(variables_globales['target_frequencies_Alert_SG'])
 
 root_send = 0
 
@@ -92,6 +85,7 @@ if __name__ == "__main__":
             waveform = struct.unpack(format_string, data)
             sound_detector.High_SG(target_frequencies_High_SG, waveform,sample_format,channels, float(threshold), chunk_size,framerate)
             sound_detector.Low_SG(target_frequencies_Low_SG, waveform,sample_format,channels, float(threshold), chunk_size, framerate)
+            sound_detector.Alert_SG(target_frequencies_Alert_SG, waveform,sample_format,channels, float(threshold), chunk_size, framerate)
             event.wait()
                 
         # Arrêt de l'enregistrement audio
@@ -239,7 +233,7 @@ if __name__ == "__main__":
     test_HIGH_btn.pack(pady=15)
     test_HIGH_btn.place(x=700, y=290)
 
-    test_ALERT_btn = Button(root, text="Alarme Alerte   ", width=120, height=30, font=("Helvetica", 10),compound="right", image=photo_volume, command=lambda: tools.play_sound('./alarmes/HIGH.wav'))
+    test_ALERT_btn = Button(root, text="Alarme Alerte   ", width=120, height=30, font=("Helvetica", 10),compound="right", image=photo_volume, command=lambda: tools.play_sound('./alarmes/ALERT.wav'))
     test_ALERT_btn.configure(bg="#eff5f5", fg="black", borderwidth=1, relief="solid")
     test_ALERT_btn.pack(pady=15)
     test_ALERT_btn.place(x=700, y=340)

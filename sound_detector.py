@@ -9,6 +9,8 @@ detected_list_High_SG = [];
 last_freq_High_SG = 0;
 detected_list_Low_SG = [];
 last_freq_Low_SG = 0;
+detected_list_Alert_SG = [];
+last_freq_Alert_SG = 0;
 
 last_freq = 0;
 detected_list = [];
@@ -42,29 +44,11 @@ def High_SG(target, waveform,sample_format,channels, threshold, chunk_size, fram
 
     # Affichage de la fréquence détectée si la corrélation est suffisante
     if max_correlation >= threshold:
-        '''if len(detected_list_High_SG) > 5:
-            detected_list_High_SG = []
-        if last_freq_High_SG != max_freq:
-            #print(datetime.datetime.now().strftime("%H:%M:%S"), 'Fréquence détectée : {} Hz'.format(max_freq))
-            detected_list_High_SG.append(max_freq)
-            last_freq_High_SG = max_freq
-            if max_freq == target[0]:
-                detected_list_Low_SG = []
-                detected_list_Low_SG.append(max_freq)
-            if max_freq == target[4]:
-                if target == detected_list_High_SG:
-                    print(datetime.datetime.now().strftime("%H:%M:%S"),"\n\n              !!!!!!!!!!!! Alerte : HYPER !!!!!!!!!!!!       \n\n")
-                    notification.alert("Alerte HYPER!", "Ok !", "./images/alerte_v2.png", "Une alerte HYPER a été détectée ...")
-                    message = datetime.datetime.now().strftime("%H:%M:%S") + " ---------------- >  Alerte HYPER détectée"
-                    logs.write_daily_log(message)
-                detected_list_High_SG = []'''
-
         if last_freq_High_SG != max_freq:                
-            #print(datetime.datetime.now().strftime("%H:%M:%S"), 'Fréquence détectée : {} Hz'.format(max_freq))
+            print(datetime.datetime.now().strftime("%H:%M:%S"), 'HIGH_Info  : Fréquence détectée : {} Hz'.format(max_freq))
             detected_list_High_SG.append(max_freq)
             last_freq_High_SG = max_freq
-            print("Tableau d'entrées de base :", detected_list_Low_SG)
-            if len(detected_list_High_SG) == 5:
+            if len(detected_list_High_SG) == len(target):
                 if target == detected_list_High_SG:
                     print(datetime.datetime.now().strftime("%H:%M:%S"),"\n\n              !!!!!!!!!!!! Alerte : HYPER !!!!!!!!!!!!       \n\n")
                     notification.alert("Alerte HYPER!", "Ok !", "./images/alerte_v2.png", "Une alerte HYPER a été détectée ...")
@@ -91,29 +75,11 @@ def Low_SG(target, waveform, sample_format,channels, threshold, chunk_size, fram
 
     # Affichage de la fréquence détectée si la corrélation est suffisante
     if max_correlation >= threshold:
-
-        '''if len(detected_list_Low_SG) > 5:
-            detected_list_Low_SG = []
         if last_freq_Low_SG != max_freq:
-            #print(datetime.datetime.now().strftime("%H:%M:%S"), 'HypoSensor_Detected : {} Hz'.format(max_freq))
+            print(datetime.datetime.now().strftime("%H:%M:%S"), 'LOW_Info   : Fréquence détectée : {} Hz'.format(max_freq))
             detected_list_Low_SG.append(max_freq)
             last_freq_Low_SG = max_freq
-            if max_freq == target[0]:
-                detected_list_Low_SG = []
-                detected_list_Low_SG.append(max_freq)
-            if max_freq == target[4]:
-                if target == detected_list_Low_SG:
-                    print(datetime.datetime.now().strftime("%H:%M:%S"),"\n\n              !!!!!!!!!!!! Alerte : HYPO !!!!!!!!!!!!       \n\n")
-                    notification.alert("Alerte HYPO!", "Ok !", "./images/alerte_v2.png", "Une alerte HYPO a été détectée ...")
-                    message = datetime.datetime.now().strftime("%H:%M:%S") + " ---------------- >  Alerte HYPO détectée "
-                    logs.write_daily_log(message)
-                detected_list_Low_SG = []'''
-        if last_freq_Low_SG != max_freq:
-            print(datetime.datetime.now().strftime("%H:%M:%S"), 'Fréquence détectée : {} Hz'.format(max_freq))
-            detected_list_Low_SG.append(max_freq)
-            last_freq_Low_SG = max_freq
-            print("Tableau d'entrées de base :", detected_list_Low_SG)
-            if len(detected_list_Low_SG) == 5:
+            if len(detected_list_Low_SG) == len(target):
                 if target == detected_list_Low_SG:
                     print(datetime.datetime.now().strftime("%H:%M:%S"),"\n\n              !!!!!!!!!!!! Alerte : HYPO !!!!!!!!!!!!       \n\n")
                     notification.alert("Alerte HYPO!", "Ok !", "./images/alerte_v2.png", "Une alerte HYPO a été détectée ...")
@@ -121,5 +87,37 @@ def Low_SG(target, waveform, sample_format,channels, threshold, chunk_size, fram
                     logs.write_daily_log(message)
 
                 detected_list_Low_SG = detected_list_Low_SG[1:]
+
+
+def Alert_SG(target, waveform, sample_format,channels, threshold, chunk_size, framerate):
+    # Calcul de la corrélation entre la forme d'onde et chaque fréquence cible
+    global detected_list_Alert_SG
+    global last_freq_Alert_SG
+    correlations = []
+    for freq in target: #target_frequencies_Low_SG:
+        reference_waveform = [int(32767.0 * math.sin(2.0 * math.pi * freq * t / framerate)) for t in range(chunk_size)]
+        correlation = calculate_correlation(waveform, reference_waveform)
+        correlations.append(correlation)
+
+    # Détection de la fréquence correspondant à la plus forte corrélation
+    max_correlation = max(correlations)
+    max_index = correlations.index(max_correlation)
+    max_freq = target[max_index]
+
+    # Affichage de la fréquence détectée si la corrélation est suffisante
+    if max_correlation >= threshold:
+
+        if last_freq_Alert_SG != max_freq:
+            print(datetime.datetime.now().strftime("%H:%M:%S"), 'ALERT_Info : Fréquence détectée : {} Hz'.format(max_freq))
+            detected_list_Alert_SG.append(max_freq)
+            last_freq_Alert_SG = max_freq
+            if len(detected_list_Alert_SG) == len(target):
+                if target == detected_list_Alert_SG:
+                    print(datetime.datetime.now().strftime("%H:%M:%S"),"\n\n              !!!!!!!!!!!! Alerte : URGENCE !!!!!!!!!!!!       \n\n")
+                    notification.alert("Alerte URGENTE!", "Ok !", "./images/alerte_v2.png", "Une alerte URGENTE a été détectée ...")
+                    message = datetime.datetime.now().strftime("%H:%M:%S") + " ---------------- >  Alerte URGENTE détectée "
+                    logs.write_daily_log(message)
+
+                detected_list_Alert_SG = detected_list_Alert_SG[1:]
 
 
