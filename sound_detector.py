@@ -42,10 +42,10 @@ def High_SG(target, waveform,sample_format,channels, threshold, chunk_size, fram
 
     # Affichage de la fréquence détectée si la corrélation est suffisante
     if max_correlation >= threshold:
-        if len(detected_list_High_SG) > 5:
+        '''if len(detected_list_High_SG) > 5:
             detected_list_High_SG = []
         if last_freq_High_SG != max_freq:
-            print(datetime.datetime.now().strftime("%H:%M:%S"), 'Fréquence détectée : {} Hz'.format(max_freq))
+            #print(datetime.datetime.now().strftime("%H:%M:%S"), 'Fréquence détectée : {} Hz'.format(max_freq))
             detected_list_High_SG.append(max_freq)
             last_freq_High_SG = max_freq
             if max_freq == target[0]:
@@ -57,7 +57,21 @@ def High_SG(target, waveform,sample_format,channels, threshold, chunk_size, fram
                     notification.alert("Alerte HYPER!", "Ok !", "./images/alerte_v2.png", "Une alerte HYPER a été détectée ...")
                     message = datetime.datetime.now().strftime("%H:%M:%S") + " ---------------- >  Alerte HYPER détectée"
                     logs.write_daily_log(message)
-                detected_list_High_SG = []
+                detected_list_High_SG = []'''
+
+        if last_freq_High_SG != max_freq:                
+            #print(datetime.datetime.now().strftime("%H:%M:%S"), 'Fréquence détectée : {} Hz'.format(max_freq))
+            detected_list_High_SG.append(max_freq)
+            last_freq_High_SG = max_freq
+            print("Tableau d'entrées de base :", detected_list_Low_SG)
+            if len(detected_list_High_SG) == 5:
+                if target == detected_list_High_SG:
+                    print(datetime.datetime.now().strftime("%H:%M:%S"),"\n\n              !!!!!!!!!!!! Alerte : HYPER !!!!!!!!!!!!       \n\n")
+                    notification.alert("Alerte HYPER!", "Ok !", "./images/alerte_v2.png", "Une alerte HYPER a été détectée ...")
+                    message = datetime.datetime.now().strftime("%H:%M:%S") + " ---------------- >  Alerte HYPER détectée"
+                    logs.write_daily_log(message)
+                detected_list_High_SG = detected_list_High_SG[1:]
+
 
 
 def Low_SG(target, waveform, sample_format,channels, threshold, chunk_size, framerate):
@@ -77,7 +91,8 @@ def Low_SG(target, waveform, sample_format,channels, threshold, chunk_size, fram
 
     # Affichage de la fréquence détectée si la corrélation est suffisante
     if max_correlation >= threshold:
-        if len(detected_list_Low_SG) > 5:
+
+        '''if len(detected_list_Low_SG) > 5:
             detected_list_Low_SG = []
         if last_freq_Low_SG != max_freq:
             #print(datetime.datetime.now().strftime("%H:%M:%S"), 'HypoSensor_Detected : {} Hz'.format(max_freq))
@@ -92,5 +107,19 @@ def Low_SG(target, waveform, sample_format,channels, threshold, chunk_size, fram
                     notification.alert("Alerte HYPO!", "Ok !", "./images/alerte_v2.png", "Une alerte HYPO a été détectée ...")
                     message = datetime.datetime.now().strftime("%H:%M:%S") + " ---------------- >  Alerte HYPO détectée "
                     logs.write_daily_log(message)
-                detected_list_Low_SG = []
+                detected_list_Low_SG = []'''
+        if last_freq_Low_SG != max_freq:
+            print(datetime.datetime.now().strftime("%H:%M:%S"), 'Fréquence détectée : {} Hz'.format(max_freq))
+            detected_list_Low_SG.append(max_freq)
+            last_freq_Low_SG = max_freq
+            print("Tableau d'entrées de base :", detected_list_Low_SG)
+            if len(detected_list_Low_SG) == 5:
+                if target == detected_list_Low_SG:
+                    print(datetime.datetime.now().strftime("%H:%M:%S"),"\n\n              !!!!!!!!!!!! Alerte : HYPO !!!!!!!!!!!!       \n\n")
+                    notification.alert("Alerte HYPO!", "Ok !", "./images/alerte_v2.png", "Une alerte HYPO a été détectée ...")
+                    message = datetime.datetime.now().strftime("%H:%M:%S") + " ---------------- >  Alerte HYPO détectée "
+                    logs.write_daily_log(message)
+
+                detected_list_Low_SG = detected_list_Low_SG[1:]
+
 
