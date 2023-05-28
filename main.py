@@ -9,6 +9,7 @@ import tools
 
 import threading
 import os
+import sys
 import time
 import platform
 import datetime
@@ -22,14 +23,45 @@ variables_globales = tools.read_params()
 # Définir les paramètres audio
 global sample_format, channels, framerate, chunk_size, threshold, target_frequencies_High_SG, target_frequencies_Low_SG, target_frequencies_Alert_SG
 
+tools.clear()
+
 sample_format = pyaudio.paInt16
-channels = int(variables_globales['channels'])
-framerate = int(variables_globales['framerate'])
-chunk_size = int(variables_globales['chunk_size'])
-threshold = float(variables_globales['threshold'])/1000
-target_frequencies_High_SG = eval(variables_globales['target_frequencies_High_SG'])
-target_frequencies_Low_SG = eval(variables_globales['target_frequencies_Low_SG'])
-target_frequencies_Alert_SG = eval(variables_globales['target_frequencies_Alert_SG'])
+try:
+    channels = int(variables_globales['channels'])
+except ValueError:
+    print("[Erreur]: la valeur par défaut de 'channels' doit être de type 'int'. \nValeur par défaut : 1")
+    sys.exit(1)
+try:  
+    framerate = int(variables_globales['framerate'])
+except ValueError:
+    print("[Erreur]: la valeur par défaut de 'framerate' doit être de type 'int'. \nValeur par défaut : 7500")
+    sys.exit(1)
+try:
+    chunk_size = int(variables_globales['chunk_size'])
+except ValueError:
+    print("[Erreur]: la valeur par défaut de 'channels' doit être de type 'int'. \nValeur par défaut : 256")
+    sys.exit(1)
+try:
+    threshold = float(variables_globales['threshold'])/1000
+except ValueError:
+    print("[Erreur]: la valeur par défaut de 'channels' doit être de type 'int'. \nValeur par défaut : 35")
+    sys.exit(1)
+try:
+    target_frequencies_High_SG = eval(variables_globales['target_frequencies_High_SG'])
+except SyntaxError:
+    print("[Erreur]: la valeur par défaut de 'channels' doit être de type 'tableau'. \nValeur par défaut : [1312, 1410, 1500, 1619, 1722]")
+    sys.exit(1)
+try:
+    target_frequencies_Low_SG = eval(variables_globales['target_frequencies_Low_SG'])
+except SyntaxError:
+    print("[Erreur]: la valeur par défaut de 'channels' doit être de type 'tableau'. \nValeur par défaut : [1722, 1619, 1500, 1410, 1312]")
+    sys.exit(1)
+try:
+    target_frequencies_Alert_SG = eval(variables_globales['target_frequencies_Alert_SG'])
+except SyntaxError:
+    print("[Erreur]: la valeur par défaut de 'channels' doit être de type 'tableau'. \nValeur par défaut : [1655, 3310, 1655, 3310, 1655, 3310]")
+    sys.exit(1)
+
 
 root_send = 0
 
@@ -54,7 +86,9 @@ if __name__ == "__main__":
     message = "\n" + "[État] : " +datetime.datetime.now().strftime("%H:%M:%S") + " - Le programme à démarré.\n"
     logs.write_daily_log(message)
 
+
     def long_running_function():
+        global first_start
         audio = pyaudio.PyAudio()
 
         # Initialisation de l'enregistrement audio
@@ -66,7 +100,9 @@ if __name__ == "__main__":
                                 input=True,
                                 frames_per_buffer=chunk_size)
         except OSError as e:
-            pass
+            surveillance_off("[ERREUR] : Erreur d'ouverture de flux de données.")
+            message = "\n" + "[ERREUR] : " + datetime.datetime.now().strftime("%H:%M:%S") + " - Erreur d'ouverture de flux de données.\n"
+            logs.write_daily_log(message)
 
 
 
@@ -81,7 +117,9 @@ if __name__ == "__main__":
                     try:
                         info = audio.get_default_input_device_info()
                     except OSError as e:
-                        pass
+                        surveillance_off("[ERREUR] : Périphérique de lecture manquant.")
+                        message = "\n" + "[ERREUR] : " + datetime.datetime.now().strftime("%H:%M:%S") + " - Périphérique de lecture manquant.\n"
+                        logs.write_daily_log(message)
                     else:
                         print("Micro utilisé : %s" % info['name'])
                         print("Enregistrement en cours...")
@@ -93,7 +131,9 @@ if __name__ == "__main__":
                 try:
                     stream.stop_stream()
                 except (NameError, UnboundLocalError, OSError) as e:
-                    pass
+                    surveillance_off("[ERREUR] : Flux de lecture de données manquant.")
+                    message = "\n" + "[ERREUR] : " + datetime.datetime.now().strftime("%H:%M:%S") + " - Flux de lecture de données manquant.\n"
+                    logs.write_daily_log(message)
                 else:
                     event_stop.clear()
 
@@ -112,11 +152,14 @@ if __name__ == "__main__":
 
             except (UnboundLocalError, OSError) as e:
                 if str(e) == "[Errno -9983] Stream is stopped":
-                    surveillance_off("[Erreur] : Aucun périphérique d'entrée disponible.")
-                    message = "\n" + "[ERREUR] : " + datetime.datetime.now().strftime("%H:%M:%S") + " - Aucun périphérique d'entrée disponible.\n"
+                    surveillance_off("[ERREUR] : Lecture des données stoppée.")
+                    message = "\n" + "[ERREUR] : " + datetime.datetime.now().strftime("%H:%M:%S") + " - Lecture des données stoppée..\n"
                     logs.write_daily_log(message)
                 else:
-                    surveillance_off("[Erreur] : Aucun périphérique d'entrée disponible.")
+                    surveillance_off("[ERREUR] : Erreur lors de la lecture des données.")
+                    message = "\n" + "[ERREUR] : " + datetime.datetime.now().strftime("%H:%M:%S") + " - Erreur lors de la lecture des données.\n"
+                    logs.write_daily_log(message)
+
                 
 
             event.wait()
@@ -150,23 +193,26 @@ if __name__ == "__main__":
         surveillance_btn.configure(text = "Désactivé\nSurveillance  ", command=surveillance_off)
         state_label.configure(text="✔️ Surveillance ON", fg="green", bg="#d6f5d6")
 
-        
-
 
     def surveillance_off(error =""):
         tools.clear()
 
         if(error != ""):
-            print(error + "\n")
-        print("La surveillance est désactivée ! \n\n")
+            print("La surveillance ne peut pas s'activer dû à une erreur : \n" + error + "\n\n  -> Vérifier votre périphérique d'enregistrement et ensuite \n     redémarrez l'application.")
+        else:
+            print("La surveillance est désactivée ! \n\n")
 
         event.clear()
         event_start.clear()
         event_stop.set()
         
-        root.configure(bg="#ff704d")
-        surveillance_btn.configure(text = "Activé\nSurveillance  ", command=surveillance_on)
-        state_label.configure(text="❌ Surveillance OFF", fg="red", bg="#ffd6cc")
+        try:
+            root.configure(bg="#ff704d")
+            surveillance_btn.configure(text = "Activé\nSurveillance  ", command=surveillance_on)
+            state_label.configure(text="❌ Surveillance OFF", fg="red", bg="#ffd6cc")
+        except RuntimeError:
+            pass
+
         
         
 
@@ -214,6 +260,7 @@ if __name__ == "__main__":
 
 
     root = tk.Tk()
+
     root.title("Alerte Médicale !")
     root.geometry('875x585')
     root.resizable(0, 0)
@@ -299,5 +346,6 @@ if __name__ == "__main__":
     # Lancement de la boucle principale de tkinter pour afficher la fenêtre
     root.protocol("WM_DELETE_WINDOW", on_closing)
     root_send = root
+
     root.mainloop()
 

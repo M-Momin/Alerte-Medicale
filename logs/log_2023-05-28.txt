@@ -824,3 +824,266 @@ Log file for 2023-05-28
 
 [État] : 18:55:27 - Le programme s'est éteint.
 
+
+[État] : 18:57:06 - Le programme à démarré.
+
+
+[État] : 18:57:54 - Le programme s'est éteint.
+
+
+[État] : 18:57:56 - Le programme à démarré.
+
+
+[ERREUR] : 18:57:58 - Aucun périphérique d'entrée disponible.
+
+
+[État] : 18:58:17 - Le programme s'est éteint.
+
+
+[État] : 19:14:55 - Le programme à démarré.
+
+
+[ERREUR] : 19:14:56 - Aucun périphérique d'entrée disponible.
+
+
+[ERREUR] : 19:15:01 - Aucun périphérique d'entrée disponible.
+
+
+[ERREUR] : 19:15:05 - Aucun périphérique d'entrée disponible.
+
+
+[ERREUR] : 19:15:05 - Aucun périphérique d'entrée disponible.
+
+
+[État] : 19:17:59 - Le programme s'est éteint.
+
+
+[État] : 19:18:01 - Le programme à démarré.
+
+
+[ERREUR] : 19:18:04 - Aucun périphérique d'entrée disponible.
+
+
+[État] : 19:18:48 - Le programme s'est éteint.
+
+
+[État] : 19:18:49 - Le programme à démarré.
+
+
+[État] : 19:19:00 - Le programme s'est éteint.
+
+
+[État] : 19:36:52 - Le programme à démarré.
+
+
+[État] : 19:37:41 - Le programme s'est éteint.
+
+
+[État] : 19:37:43 - Le programme à démarré.
+
+
+[État] : 19:38:17 - Le programme s'est éteint.
+
+
+[État] : 19:38:19 - Le programme à démarré.
+
+
+[État] : 19:38:41 - Le programme s'est éteint.
+
+
+[État] : 19:38:44 - Le programme à démarré.
+
+
+[État] : 19:40:16 - Le programme s'est éteint.
+
+
+[État] : 19:40:18 - Le programme à démarré.
+
+
+[État] : 19:42:36 - Le programme s'est éteint.
+
+
+[État] : 19:42:38 - Le programme à démarré.
+
+
+[État] : 19:47:08 - Le programme s'est éteint.
+
+
+[État] : 19:47:11 - Le programme à démarré.
+
+
+[État] : 19:47:24 - Le programme s'est éteint.
+
+
+[État] : 19:53:51 - Le programme à démarré.
+
+
+[ERREUR] : 19:53:53 - Périphérique de lecture manquant.
+
+
+[ERREUR] : 19:53:57 - Périphérique de lecture manquant.
+
+
+[ERREUR] : 19:53:58 - Périphérique de lecture manquant.
+
+
+[ERREUR] : 19:54:49 - Périphérique de lecture manquant.
+
+
+[État] : 19:54:52 - Le programme s'est éteint.
+
+
+[État] : 19:55:47 - Le programme à démarré.
+
+
+[ERREUR] : 19:55:50 - Périphérique de lecture manquant.
+
+
+[ERREUR] : 19:55:52 - Périphérique de lecture manquant.
+
+
+[ERREUR] : 19:55:54 - Périphérique de lecture manquant.
+
+
+[État] : 19:55:56 - Le programme s'est éteint.
+
+
+[État] : 19:59:21 - Le programme à démarré.
+
+
+[ERREUR] : 19:59:23 - Erreur d'ouverture de flux de données.
+
+
+[ERREUR] : 19:59:23 - Flux de lecture de données manquant.
+
+
+[ERREUR] : 19:59:23 - Erreur lors de la lecture des données.
+
+
+[ERREUR] : 19:59:25 - Erreur lors de la lecture des données.
+
+
+[ERREUR] : 19:59:25 - Erreur lors de la lecture des données.
+
+
+[État] : 19:59:27 - Le programme s'est éteint.
+
+
+[État] : 20:03:57 - Le programme à démarré.
+
+
+[ERREUR] : 20:03:59 - Erreur d'ouverture de flux de données.
+
+
+[ERREUR] : 20:03:59 - Flux de lecture de données manquant.
+
+
+[ERREUR] : 20:03:59 - Erreur lors de la lecture des données.
+
+
+[État] : 20:04:36 - Le programme s'est éteint.
+
+
+[ERREUR] : 20:04:36 - Flux de lecture de données manquant.
+
+
+[État] : 20:04:38 - Le programme à démarré.
+
+
+[ERREUR] : 20:04:40 - Erreur d'ouverture de flux de données.
+
+
+[ERREUR] : 20:04:40 - Flux de lecture de données manquant.
+
+
+[ERREUR] : 20:04:40 - Erreur lors de la lecture des données.
+
+
+[État] : 20:04:43 - Le programme s'est éteint.
+
+
+[État] : 20:06:05 - Le programme à démarré.
+
+
+[ERREUR] : 20:06:06 - Erreur d'ouverture de flux de données.
+
+
+[ERREUR] : 20:06:06 - Flux de lecture de données manquant.
+
+
+[ERREUR] : 20:06:06 - Erreur lors de la lecture des données.
+
+
+[ERREUR] : 20:06:09 - Erreur lors de la lecture des données.
+
+
+[État] : 20:07:00 - Le programme s'est éteint.
+
+
+[État] : 20:07:50 - Le programme à démarré.
+
+
+[ERREUR] : 20:07:52 - Erreur d'ouverture de flux de données.
+
+
+[ERREUR] : 20:07:52 - Flux de lecture de données manquant.
+
+
+[ERREUR] : 20:07:52 - Erreur lors de la lecture des données.
+
+
+[État] : 20:08:34 - Le programme s'est éteint.
+
+
+[ERREUR] : 20:08:35 - Flux de lecture de données manquant.
+
+
+[État] : 20:08:37 - Le programme à démarré.
+
+
+[ERREUR] : 20:08:39 - Erreur d'ouverture de flux de données.
+
+
+[ERREUR] : 20:08:39 - Flux de lecture de données manquant.
+
+
+[ERREUR] : 20:08:39 - Erreur lors de la lecture des données.
+
+
+[ERREUR] : 20:08:53 - Erreur lors de la lecture des données.
+
+
+[État] : 20:10:42 - Le programme s'est éteint.
+
+
+[ERREUR] : 20:10:43 - Flux de lecture de données manquant.
+
+
+[État] : 20:10:50 - Le programme à démarré.
+
+20:11:21 ---------------- >  Alerte URGENTE détectée 
+20:11:23 ---------------- >  Alerte URGENTE détectée 
+20:11:26 ---------------- >  Alerte URGENTE détectée 
+20:11:28 ---------------- >  Alerte URGENTE détectée 
+
+[État] : 20:11:54 - Le programme s'est éteint.
+
+
+[État] : 20:19:13 - Le programme à démarré.
+
+
+[État] : 20:19:43 - Le programme à démarré.
+
+
+[État] : 20:21:21 - Le programme à démarré.
+
+
+[État] : 20:21:37 - Le programme s'est éteint.
+
+
+[État] : 20:30:45 - Le programme à démarré.
+
+20:30:55 ---------------- >  Alerte URGENTE détectée 
+
+[État] : 20:31:11 - Le programme s'est éteint.
+
