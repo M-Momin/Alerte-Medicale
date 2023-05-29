@@ -1,0 +1,402 @@
+Log file for 2023-05-29
+
+[État] : 09:03:38 - Le programme à démarré.
+
+
+[ERREUR] : 09:04:20 - Erreur lors de la lecture des données.
+
+
+[État] : 09:04:36 - Le programme s'est éteint.
+
+
+[ERREUR] : 09:04:37 - Flux de lecture de données manquant.
+
+
+[État] : 09:05:42 - Le programme à démarré.
+
+
+[ERREUR] : 09:06:10 - Erreur lors de la lecture des données.
+
+
+[ERREUR] : 09:06:13 - Erreur lors de la lecture des données.
+
+
+[État] : 09:06:15 - Le programme s'est éteint.
+
+
+[ERREUR] : 09:06:16 - Flux de lecture de données manquant.
+
+
+[État] : 09:10:26 - Le programme à démarré.
+
+
+[ERREUR] : 09:10:28 - Erreur d'ouverture de flux de données.
+
+
+[ERREUR] : 09:10:28 - Flux de lecture de données manquant.
+
+
+[ERREUR] : 09:10:28 - Erreur lors de la lecture des données.
+
+
+[État] : 09:10:56 - Le programme s'est éteint.
+
+
+[ERREUR] : 09:10:57 - Flux de lecture de données manquant.
+
+
+[État] : 09:10:59 - Le programme à démarré.
+
+09:11:02 ---------------- >  Alerte HYPER détectée
+09:11:04 ---------------- >  Alerte URGENTE détectée 
+09:11:11 ---------------- >  Alerte HYPO détectée 
+09:11:15 ---------------- >  Alerte HYPO détectée 
+09:11:44 ---------------- >  Alerte HYPO détectée 
+09:11:46 ---------------- >  Alerte URGENTE détectée 
+09:11:54 ---------------- >  Alerte URGENTE détectée 
+09:12:17 ---------------- >  Alerte URGENTE détectée 
+09:12:23 ---------------- >  Alerte URGENTE détectée 
+09:12:34 ---------------- >  Alerte URGENTE détectée 
+
+[État] : 09:19:43 - Le programme à démarré.
+
+
+[État] : 09:19:52 - Le programme s'est éteint.
+
+
+[État] : 09:19:54 - Le programme à démarré.
+
+
+[ERREUR] : 09:19:56 - Erreur d'ouverture de flux de données.
+
+
+[État] : 09:20:06 - Le programme s'est éteint.
+
+
+[État] : 09:21:13 - Le programme à démarré.
+
+
+[ERREUR] : 09:21:15 - Erreur d'ouverture de flux de données.
+
+
+[ERREUR] : 09:21:16 - Erreur d'ouverture de flux de données.
+
+
+[ERREUR] : 09:21:20 - Erreur d'ouverture de flux de données.
+
+
+[ERREUR] : 09:21:21 - Erreur d'ouverture de flux de données.
+
+
+[ERREUR] : 09:22:11 - Erreur d'ouverture de flux de données.
+
+
+[État] : 09:22:34 - Le programme s'est éteint.
+
+
+[État] : 09:22:48 - Le programme à démarré.
+
+09:23:16 ---------------- >  Alerte URGENTE détectée 
+09:23:17 ---------------- >  Alerte URGENTE détectée 
+09:23:18 ---------------- >  Alerte URGENTE détectée 
+09:23:19 ---------------- >  Alerte URGENTE détectée 
+09:23:20 ---------------- >  Alerte URGENTE détectée 
+09:23:26 ---------------- >  Alerte URGENTE détectée 
+
+[État] : 09:26:07 - Le programme s'est éteint.
+
+
+[État] : 09:26:09 - Le programme à démarré.
+
+09:26:13 ---------------- >  Alerte URGENTE détectée 
+09:26:15 ---------------- >  Alerte URGENTE détectée 
+09:26:15 ---------------- >  Alerte URGENTE détectée 
+09:26:17 ---------------- >  Alerte URGENTE détectée 
+09:26:18 ---------------- >  Alerte URGENTE détectée 
+09:26:19 ---------------- >  Alerte URGENTE détectée 
+
+[État] : 09:26:59 - Le programme s'est éteint.
+
+
+[État] : 09:27:02 - Le programme à démarré.
+
+
+[État] : 09:27:43 - Le programme s'est éteint.
+
+
+[ERREUR] : 09:32:05 - Fichier de paramètres non trouvé.
+
+
+[ERREUR] : 09:32:42 - Fichier de paramètres non trouvé.
+
+
+[ERREUR] : 09:32:52 - Fichier de paramètres non trouvé.
+
+
+[ERREUR] : 09:33:49 - Fichier de paramètres non trouvé.
+
+
+[État] : 09:34:04 - Le programme à démarré.
+
+
+[État] : 09:34:47 - Le programme s'est éteint.
+
+
+[ERREUR] : 09:34:49 - Lancement de l'application impossible ! 
+ Fichier de paramètres non trouvé.
+
+
+[ERREUR] : 09:35:07 - Lancement de l'application impossible ! 
+ Fichier de paramètres non trouvé.
+
+
+[ERREUR] : 09:35:23 - Lancement de l'application impossible !
+Fichier de paramètres non trouvé.
+
+
+[État] : 09:36:45 - Le programme à démarré.
+
+
+[État] : 09:38:17 - Le programme s'est éteint.
+
+
+[État] : 09:38:20 - Le programme à démarré.
+
+
+[État] : 09:39:15 - Le programme s'est éteint.
+
+
+[État] : 09:39:17 - Le programme à démarré.
+
+
+[État] : 09:40:17 - Le programme s'est éteint.
+
+
+[État] : 09:40:19 - Le programme à démarré.
+
+
+[ERREUR] : 09:40:21 - Le fichier ./alarmes/ALER.wav est introuvable
+
+
+[ERREUR] : 09:40:39 - Le fichier ./alarmes/ALER.wav est introuvable
+
+
+[État] : 09:41:11 - Le programme s'est éteint.
+
+
+[État] : 09:41:13 - Le programme à démarré.
+
+
+[État] : 09:44:41 - Le programme s'est éteint.
+
+
+[État] : 09:54:28 - Le programme à démarré.
+
+[État] : 09:54:49 - Le programme s'est éteint.
+
+[État] : 10:03:31 - Le programme à démarré.
+
+[État] : 10:03:34 - Le programme s'est éteint.
+
+[État] : 10:05:56 - Le programme à démarré.
+10:06:01 ---------------- >  Alerte URGENTE détectée 
+
+[État] : 10:07:05 - Le programme s'est éteint.
+
+[État] : 10:07:07 - Le programme à démarré.
+
+[État] : 10:07:48 - Le programme s'est éteint.
+
+[État] : 10:07:50 - Le programme à démarré.
+
+[ERREUR] : 10:07:52 - Erreur lors de la lecture des données.
+
+[État] : 10:09:10 - Le programme s'est éteint.
+
+[État] : 10:09:14 - Le programme à démarré.
+
+[ERREUR] : 10:09:17 - Erreur lors de la lecture des données.
+
+[État] : 10:09:20 - Le programme s'est éteint.
+
+[État] : 10:09:37 - Le programme à démarré.
+
+[ERREUR] : 10:09:39 - Erreur lors de la lecture des données.
+
+[État] : 10:09:51 - Le programme s'est éteint.
+
+[État] : 10:09:53 - Le programme à démarré.
+
+[ERREUR] : 10:09:55 - Erreur lors de la lecture des données.
+
+[État] : 10:10:15 - Le programme s'est éteint.
+
+[État] : 10:10:17 - Le programme à démarré.
+
+[ERREUR] : 10:10:18 - Erreur lors de la lecture des données.
+
+[État] : 10:10:35 - Le programme s'est éteint.
+
+[État] : 10:10:42 - Le programme à démarré.
+
+[État] : 10:24:20 - Le programme s'est éteint.
+
+[État] : 10:54:55 - Le programme à démarré.
+10:54:59 ---------------- >  Alerte URGENTE détectée 
+10:55:00 ---------------- >  Alerte URGENTE détectée 
+10:55:01 ---------------- >  Alerte URGENTE détectée 
+10:55:02 ---------------- >  Alerte URGENTE détectée 
+10:55:03 ---------------- >  Alerte URGENTE détectée 
+
+[ERREUR 13] : 10:55:29 - Erreur lors de la lecture des données.
+
+[État] : 10:56:08 - Le programme s'est éteint.
+
+[ERREUR 12] : 10:56:09 - Flux de lecture de données manquant.
+
+[État] : 10:57:43 - Le programme à démarré.
+
+[ERREUR 10] : 10:57:46 - Erreur d'ouverture de flux de données.
+
+[État] : 10:57:48 - Le programme s'est éteint.
+
+[État] : 10:58:47 - Le programme à démarré.
+
+[ERREUR 10] : 10:58:49 - Erreur d'ouverture de flux de données.
+
+[État] : 11:00:17 - Le programme s'est éteint.
+
+[État] : 11:01:28 - Le programme à démarré.
+
+[ERREUR 10] : 11:01:30 - Erreur d'ouverture de flux de données.
+
+[ERREUR 12] : 11:01:30 - Flux de lecture de données manquant.
+
+[ERREUR 13] : 11:01:30 - Erreur lors de la lecture des données.
+
+[État] : 11:02:00 - Le programme s'est éteint.
+
+[ERREUR 12] : 11:02:02 - Flux de lecture de données manquant.
+
+[État] : 11:02:02 - Le programme à démarré.
+
+[ERREUR 10] : 11:02:04 - Erreur d'ouverture de flux de données.
+
+[ERREUR 12] : 11:02:04 - Flux de lecture de données manquant.
+
+[ERREUR 13] : 11:02:04 - Erreur lors de la lecture des données.
+
+[ERREUR 10] : 11:02:07 - Erreur d'ouverture de flux de données.
+
+[ERREUR 13] : 11:02:07 - Erreur lors de la lecture des données.
+
+[ERREUR 12] : 11:02:07 - Flux de lecture de données manquant.
+
+[ERREUR 13] : 11:02:07 - Erreur lors de la lecture des données.
+
+[ERREUR 13] : 11:02:09 - Erreur lors de la lecture des données.
+
+[ERREUR 13] : 11:02:09 - Erreur lors de la lecture des données.
+
+[ERREUR 10] : 11:02:09 - Erreur d'ouverture de flux de données.
+
+[ERREUR 12] : 11:02:09 - Flux de lecture de données manquant.
+
+[ERREUR 13] : 11:02:09 - Erreur lors de la lecture des données.
+
+[État] : 11:02:31 - Le programme s'est éteint.
+
+[ERREUR 12] : 11:02:32 - Flux de lecture de données manquant.
+
+[ERREUR 12] : 11:02:32 - Flux de lecture de données manquant.
+
+[ERREUR 12] : 11:02:32 - Flux de lecture de données manquant.
+
+[État] : 11:02:34 - Le programme à démarré.
+
+[ERREUR 10] : 11:02:36 - Erreur d'ouverture de flux de données.
+
+[ERREUR 10] : 11:02:43 - Erreur d'ouverture de flux de données.
+
+[ERREUR 10] : 11:02:44 - Erreur d'ouverture de flux de données.
+
+[ERREUR 10] : 11:02:45 - Erreur d'ouverture de flux de données.
+
+[ERREUR 10] : 11:02:45 - Erreur d'ouverture de flux de données.
+
+[ERREUR 10] : 11:02:45 - Erreur d'ouverture de flux de données.
+
+[État] : 11:03:07 - Le programme s'est éteint.
+
+[État] : 11:03:09 - Le programme à démarré.
+
+[ERREUR 10] : 11:03:10 - Erreur d'ouverture de flux de données.
+
+[ERREUR 10] : 11:03:12 - Erreur d'ouverture de flux de données.
+
+[ERREUR 10] : 11:03:13 - Erreur d'ouverture de flux de données.
+
+[ERREUR 10] : 11:03:15 - Erreur d'ouverture de flux de données.
+
+[ERREUR 10] : 11:03:16 - Erreur d'ouverture de flux de données.
+
+[ERREUR 10] : 11:03:18 - Erreur d'ouverture de flux de données.
+
+[ERREUR 10] : 11:03:20 - Erreur d'ouverture de flux de données.
+
+[ERREUR 10] : 11:03:24 - Erreur d'ouverture de flux de données.
+
+[ERREUR 10] : 11:03:27 - Erreur d'ouverture de flux de données.
+
+[État] : 11:03:29 - Le programme s'est éteint.
+
+[État] : 11:04:26 - Le programme à démarré.
+
+[ERREUR 10] : 11:04:27 - Erreur d'ouverture de flux de données.
+
+[État] : 11:04:37 - Le programme s'est éteint.
+
+[État] : 11:04:42 - Le programme à démarré.
+
+[État] : 11:05:13 - Le programme s'est éteint.
+
+[ÉTAT] : 11:24:34 - Le programme à démarré.
+
+[ÉTAT] : 11:25:03 - Le programme s'est éteint.
+
+[ÉTAT] : 11:25:07 - Le programme à démarré.
+
+[ÉTAT] : 11:25:14 - Le programme s'est éteint.
+
+[ÉTAT] : 11:26:06 - Le programme à démarré.
+
+[ÉTAT] : 11:26:14 - Le programme s'est éteint.
+
+[ÉTAT] : 11:28:08 - Le programme à démarré.
+
+[ÉTAT] : 11:28:16 - Le programme s'est éteint.
+
+[ÉTAT] : 11:29:29 - Le programme à démarré.
+
+[ÉTAT] : 11:29:36 - Le programme s'est éteint.
+
+[ÉTAT] : 11:29:50 - Le programme à démarré.
+
+[ÉTAT] : 11:29:55 - Le programme s'est éteint.
+11:29:57 ---------------- >  Alerte URGENTE détectée < ----------------  
+
+[ÉTAT] : 11:31:04 - Le programme à démarré.
+
+[ÉTAT] : 11:31:09 - Le programme s'est éteint.
+11:31:10 ---------------- >  Alerte URGENTE détectée < ----------------  
+
+[ÉTAT] : 11:31:38 - Le programme à démarré.
+
+[ÉTAT] : 11:31:45 - Le programme s'est éteint.
+
+[ÉTAT] : 11:31:53 - Le programme à démarré.
+11:31:59 ---------------- >  Alerte URGENTE détectée < ----------------  
+11:32:00 ---------------- >  Alerte URGENTE détectée < ----------------  
+11:32:02 ---------------- >  Alerte URGENTE détectée < ----------------  
+
+[ÉTAT] : 11:32:03 - Le programme s'est éteint.

@@ -22,6 +22,7 @@ class BlinkingLabel(tk.Label):
 
 
 def alert(title, msg_btn, image_path=None, msg_alert="Alerte détectée..."):
+    global event_kill
     root = tk.Toplevel(main.root_send)
     root.title(title)
     root.geometry('750x422')
@@ -44,6 +45,4 @@ def alert(title, msg_btn, image_path=None, msg_alert="Alerte détectée..."):
     state_label_alert.pack()
     state_label_alert.place(x=200, y=185)
 
-
-    # Attendre que la fenêtre soit fermée
     root.wait_window()

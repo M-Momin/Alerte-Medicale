@@ -52,7 +52,7 @@ def High_SG(target, waveform,sample_format,channels, threshold, chunk_size, fram
                 if target == detected_list_High_SG:
                     print(datetime.datetime.now().strftime("%H:%M:%S"),"\n\n              !!!!!!!!!!!! Alerte : HYPER !!!!!!!!!!!!       \n\n")
                     notification.alert("Alerte HYPER!", "Ok !", "./images/alerte_v2.png", "Une alerte HYPER a été détectée ...")
-                    message = datetime.datetime.now().strftime("%H:%M:%S") + " ---------------- >  Alerte HYPER détectée"
+                    message = datetime.datetime.now().strftime("%H:%M:%S") + " ---------------- >  Alerte HYPER détectée < ---------------- "
                     logs.write_daily_log(message)
                 detected_list_High_SG = detected_list_High_SG[1:]
 
@@ -83,7 +83,7 @@ def Low_SG(target, waveform, sample_format,channels, threshold, chunk_size, fram
                 if target == detected_list_Low_SG:
                     print(datetime.datetime.now().strftime("%H:%M:%S"),"\n\n              !!!!!!!!!!!! Alerte : HYPO !!!!!!!!!!!!       \n\n")
                     notification.alert("Alerte HYPO!", "Ok !", "./images/alerte_v2.png", "Une alerte HYPO a été détectée ...")
-                    message = datetime.datetime.now().strftime("%H:%M:%S") + " ---------------- >  Alerte HYPO détectée "
+                    message = datetime.datetime.now().strftime("%H:%M:%S") + " ---------------- >  Alerte HYPO détectée < ---------------- "
                     logs.write_daily_log(message)
 
                 detected_list_Low_SG = detected_list_Low_SG[1:]
@@ -115,7 +115,7 @@ def Alert_SG(target, waveform, sample_format,channels, threshold, chunk_size, fr
                 if target == detected_list_Alert_SG:
                     print(datetime.datetime.now().strftime("%H:%M:%S"),"\n\n              !!!!!!!!!!!! Alerte : URGENCE !!!!!!!!!!!!       \n\n")
                     notification.alert("Alerte URGENTE!", "Ok !", "./images/alerte_v2.png", "Une alerte URGENTE a été détectée ...")
-                    message = datetime.datetime.now().strftime("%H:%M:%S") + " ---------------- >  Alerte URGENTE détectée "
+                    message = datetime.datetime.now().strftime("%H:%M:%S") + " ---------------- >  Alerte URGENTE détectée < ----------------  "
                     logs.write_daily_log(message)
 
                 detected_list_Alert_SG = detected_list_Alert_SG[1:]

@@ -2,71 +2,90 @@ import tkinter as tk
 from tkinter import *
 from tkinter import messagebox
 from PIL import Image, ImageTk
-
 import sound_detector
 import logs
 import tools
-
 import threading
 import os
 import sys
 import time
 import platform
 import datetime
-
 import pyaudio
-
 import struct
 
+#Appel à la fonction tools.read_params permettant la récupération des paramètres contenu dans le fichier 'params.txt'.
 variables_globales = tools.read_params()
 
-# Définir les paramètres audio
+# Définir les paramètres audio globales pour l'enregistement du stream pour la détection des fréquences.
 global sample_format, channels, framerate, chunk_size, threshold, target_frequencies_High_SG, target_frequencies_Low_SG, target_frequencies_Alert_SG
 
+#Appel à la fonction 'tools.clear' permettant de nettoyer les informations de la console. 
 tools.clear()
 
+
 sample_format = pyaudio.paInt16
+
+
+'''
+Enregistrement des paramètres dans les variables globales.
+
+Test de la valabilité des paramètres via un système de 'try-except'. 
+En cas d'erreur : 
+-> Un message s'affiche sur la console permettant de savoir quelle est l'erreur et l'application se ferme.
+'''
 try:
     channels = int(variables_globales['channels'])
 except ValueError:
-    print("[Erreur]: la valeur par défaut de 'channels' doit être de type 'int'. \nValeur par défaut : 1")
+    print("[ERREUR 00]: Impossible de démarrer l'application :\nLa valeur par défaut de 'channels' doit être de type 'int' !\n\nValeur par défaut : 1\nValeur actuelle : " + variables_globales['channels'])
     sys.exit(1)
 try:  
     framerate = int(variables_globales['framerate'])
 except ValueError:
-    print("[Erreur]: la valeur par défaut de 'framerate' doit être de type 'int'. \nValeur par défaut : 7500")
+    print("[ERREUR 01]: Impossible de démarrer l'application :\nLa valeur par défaut de 'framerate' doit être de type 'int' !\n \nValeur par défaut : 7500\nValeur actuelle : " + variables_globales['framerate'])
     sys.exit(1)
 try:
     chunk_size = int(variables_globales['chunk_size'])
 except ValueError:
-    print("[Erreur]: la valeur par défaut de 'channels' doit être de type 'int'. \nValeur par défaut : 256")
+    print("[ERREUR 02]: Impossible de démarrer l'application :\nLa valeur par défaut de 'chunk_size' doit être de type 'int' ! \n\nValeur par défaut : 256\nValeur actuelle : " + variables_globales['chunk_size'])
     sys.exit(1)
 try:
     threshold = float(variables_globales['threshold'])/1000
 except ValueError:
-    print("[Erreur]: la valeur par défaut de 'channels' doit être de type 'int'. \nValeur par défaut : 35")
+    print("[ERREUR 03]: Impossible de démarrer l'application :\nLa valeur par défaut de 'threshold' doit être de type 'int' !\n \nValeur par défaut : 35\nValeur actuelle : " + variables_globales['threshold'])
     sys.exit(1)
 try:
     target_frequencies_High_SG = eval(variables_globales['target_frequencies_High_SG'])
-except SyntaxError:
-    print("[Erreur]: la valeur par défaut de 'channels' doit être de type 'tableau'. \nValeur par défaut : [1312, 1410, 1500, 1619, 1722]")
+except (SyntaxError, NameError):
+    print("[ERREUR 04]: Impossible de démarrer l'application :\nLa valeur par défaut de 'target_frequencies_High_SG' doit être sous forme de 'tableau' !\n \nValeur par défaut : [1312, 1410, 1500, 1619, 1722]\nValeur actuelle : " + variables_globales['target_frequencies_High_SG'])
     sys.exit(1)
 try:
     target_frequencies_Low_SG = eval(variables_globales['target_frequencies_Low_SG'])
-except SyntaxError:
-    print("[Erreur]: la valeur par défaut de 'channels' doit être de type 'tableau'. \nValeur par défaut : [1722, 1619, 1500, 1410, 1312]")
+except (SyntaxError, NameError):
+    print("[ERREUR 05]: Impossible de démarrer l'application :\nLa valeur par défaut de 'target_frequencies_Low_SG' doit être sous forme de 'tableau' !\n \nValeur par défaut : [1722, 1619, 1500, 1410, 1312]\nValeur actuelle : " + variables_globales['target_frequencies_Low_SG'])
     sys.exit(1)
 try:
     target_frequencies_Alert_SG = eval(variables_globales['target_frequencies_Alert_SG'])
-except SyntaxError:
-    print("[Erreur]: la valeur par défaut de 'channels' doit être de type 'tableau'. \nValeur par défaut : [1655, 3310, 1655, 3310, 1655, 3310]")
+except (SyntaxError, NameError):
+    print("[ERREUR 06]: Impossible de démarrer l'application :\nLa valeur par défaut de 'target_frequencies_Alert_SG' doit être sous forme de 'tableau' !\n \nValeur par défaut : [1655, 3310, 1655, 3310, 1655, 3310]\nValeur actuelle : " + variables_globales['target_frequencies_Alert_SG'])
     sys.exit(1)
 
 
+#Variable permettant l'enregistrement de l'environnement tkinter.
 root_send = 0
 
+
+'''
+Variable permettant le lancement du thread de calcul de détection.
+-> Permet le lancement d'un seul thread.
+True : Pas encore de thread de détection lancé.
+False : Le thread de détection est déja lancé. 
+'''
 first_start = True
 
+
+#Création des instances des différents événements nécessaires pour gérer le thread de détection.
+#------------------------- EVENTS -------------------------
 event = threading.Event()
 event.clear()
 
@@ -78,12 +97,13 @@ event_stop.clear()
 
 event_kill = threading.Event()
 event_kill.clear()
+#///////////////////////// EVENTS //////////////////////////
 
 
-
+#Entrée du programme principale.
 if __name__ == "__main__":
     logs.create_daily_log()
-    message = "\n" + "[État] : " +datetime.datetime.now().strftime("%H:%M:%S") + " - Le programme à démarré.\n"
+    message = "\n" + "[ÉTAT] : " +datetime.datetime.now().strftime("%H:%M:%S") + " - Le programme à démarré."
     logs.write_daily_log(message)
 
 
@@ -100,14 +120,15 @@ if __name__ == "__main__":
                                 input=True,
                                 frames_per_buffer=chunk_size)
         except OSError as e:
-            surveillance_off("[ERREUR] : Erreur d'ouverture de flux de données.")
-            message = "\n" + "[ERREUR] : " + datetime.datetime.now().strftime("%H:%M:%S") + " - Erreur d'ouverture de flux de données.\n"
+            surveillance_off("[ERREUR 10] : Erreur d'ouverture de flux de données.")
+            message = "\n" + "[ERREUR 10] : " + datetime.datetime.now().strftime("%H:%M:%S") + " - Erreur d'ouverture de flux de données."
             logs.write_daily_log(message)
+            first_start = True
+            sys.exit(1)
 
 
 
         while True:
-
             if event_start.is_set():
                 try:
                     stream.start_stream()
@@ -117,8 +138,8 @@ if __name__ == "__main__":
                     try:
                         info = audio.get_default_input_device_info()
                     except OSError as e:
-                        surveillance_off("[ERREUR] : Périphérique de lecture manquant.")
-                        message = "\n" + "[ERREUR] : " + datetime.datetime.now().strftime("%H:%M:%S") + " - Périphérique de lecture manquant.\n"
+                        surveillance_off("[ERREUR 11] : Périphérique de lecture manquant.")
+                        message = "\n" + "[ERREUR 11] : " + datetime.datetime.now().strftime("%H:%M:%S") + " - Périphérique de lecture manquant."
                         logs.write_daily_log(message)
                     else:
                         print("Micro utilisé : %s" % info['name'])
@@ -131,8 +152,8 @@ if __name__ == "__main__":
                 try:
                     stream.stop_stream()
                 except (NameError, UnboundLocalError, OSError) as e:
-                    surveillance_off("[ERREUR] : Flux de lecture de données manquant.")
-                    message = "\n" + "[ERREUR] : " + datetime.datetime.now().strftime("%H:%M:%S") + " - Flux de lecture de données manquant.\n"
+                    surveillance_off("[ERREUR 12] : Flux de lecture de données manquant.")
+                    message = "\n" + "[ERREUR 12] : " + datetime.datetime.now().strftime("%H:%M:%S") + " - Flux de lecture de données manquant."
                     logs.write_daily_log(message)
                 else:
                     event_stop.clear()
@@ -150,26 +171,28 @@ if __name__ == "__main__":
                 sound_detector.Low_SG(target_frequencies_Low_SG, waveform,sample_format,channels, float(threshold), chunk_size, framerate)
                 sound_detector.Alert_SG(target_frequencies_Alert_SG, waveform,sample_format,channels, float(threshold), chunk_size, framerate)
 
-            except (UnboundLocalError, OSError) as e:
+            except (UnboundLocalError, OSError, struct.error) as e:
                 if str(e) == "[Errno -9983] Stream is stopped":
-                    surveillance_off("[ERREUR] : Lecture des données stoppée.")
-                    message = "\n" + "[ERREUR] : " + datetime.datetime.now().strftime("%H:%M:%S") + " - Lecture des données stoppée..\n"
+                    surveillance_off("[ERREUR 13] : Lecture des données stoppée.")
+                    message = "\n" + "[ERREUR 13] : " + datetime.datetime.now().strftime("%H:%M:%S") + " - Lecture des données stoppée."
                     logs.write_daily_log(message)
                 else:
-                    surveillance_off("[ERREUR] : Erreur lors de la lecture des données.")
-                    message = "\n" + "[ERREUR] : " + datetime.datetime.now().strftime("%H:%M:%S") + " - Erreur lors de la lecture des données.\n"
+                    surveillance_off("[ERREUR 13] : Erreur lors de la lecture des données.")
+                    message = "\n" + "[ERREUR 13] : " + datetime.datetime.now().strftime("%H:%M:%S") + " - Erreur lors de la lecture des données."
                     logs.write_daily_log(message)
 
                 
-
-            event.wait()
+            if(not event_kill.is_set()):
+                event.wait()
+            else:
+                break
                 
         # Arrêt de l'enregistrement audio
         try:
             stream.stop_stream()
             stream.close()
             audio.terminate()
-        except UnboundLocalError:
+        except (UnboundLocalError, OSError):
             pass
 
         return 0
@@ -198,7 +221,7 @@ if __name__ == "__main__":
         tools.clear()
 
         if(error != ""):
-            print("La surveillance ne peut pas s'activer dû à une erreur : \n" + error + "\n\n  -> Vérifier votre périphérique d'enregistrement et ensuite \n     redémarrez l'application.")
+            print("La surveillance ne peut pas s'activer dû à une erreur : \n" + error + "\n\n  -> Vérifier votre périphérique d'enregistrement \n   ainsi que le paramètre 'channels' et ensuite \n   redémarrez l'application.")
         else:
             print("La surveillance est désactivée ! \n\n")
 
@@ -223,7 +246,7 @@ if __name__ == "__main__":
     def quitWin():
         res = messagebox.askyesno('Quitter ?', 'Voulez-vous quitter l\'application?') 
         if res == True:
-            message = '\n' + "[État] : " + datetime.datetime.now().strftime("%H:%M:%S") + " - Le programme s'est éteint.\n"
+            message = '\n' + "[ÉTAT] : " + datetime.datetime.now().strftime("%H:%M:%S") + " - Le programme s'est éteint."
             logs.write_daily_log(message)
             event_kill.set()
             event.set()
@@ -235,7 +258,7 @@ if __name__ == "__main__":
 
     def on_closing():
         if messagebox.askokcancel("Quit", "Voulez-vous vraiment quitter ?"):
-            message = '\n' + "[État] : " + datetime.datetime.now().strftime("%H:%M:%S") + " - Le programme s'est éteint.\n"
+            message = '\n' + "[ÉTAT] : " + datetime.datetime.now().strftime("%H:%M:%S") + " - Le programme s'est éteint."
             logs.write_daily_log(message)
             event_kill.set()
             event.set()
