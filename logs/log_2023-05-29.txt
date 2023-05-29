@@ -400,3 +400,146 @@ Fichier de paramètres non trouvé.
 11:32:02 ---------------- >  Alerte URGENTE détectée < ----------------  
 
 [ÉTAT] : 11:32:03 - Le programme s'est éteint.
+
+[ÉTAT] : 11:48:15 - Le programme à démarré.
+11:48:30 ---------------- >  Alerte URGENTE détectée < ----------------  
+11:48:33 ---------------- >  Alerte URGENTE détectée < ----------------  
+
+[ÉTAT] : 11:49:16 - Le programme s'est éteint.
+
+[ÉTAT] : 11:53:45 - Le programme à démarré.
+11:53:54 ---------------- >  Alerte URGENTE détectée < ----------------  
+11:53:55 ---------------- >  Alerte URGENTE détectée < ----------------  
+11:53:57 ---------------- >  Alerte URGENTE détectée < ----------------  
+
+[ÉTAT] : 11:54:08 - Le programme s'est éteint.
+
+[ÉTAT] : 12:09:06 - Le programme à démarré.
+
+[ÉTAT] : 12:09:23 - Le programme s'est éteint.
+
+[ÉTAT] : 12:21:03 - Le programme à démarré.
+
+[ÉTAT] : 12:22:37 - Le programme s'est éteint.
+
+[ÉTAT] : 12:24:15 - Le programme à démarré.
+
+[ERREUR 10] : 12:24:21 - Erreur d'ouverture de flux de données.
+
+[ERREUR 10] : 12:24:46 - Erreur d'ouverture de flux de données.
+
+[ERREUR 10] : 12:25:11 - Erreur d'ouverture de flux de données.
+
+[ÉTAT] : 12:29:00 - Le programme s'est éteint.
+
+[ÉTAT] : 12:40:08 - Le programme à démarré.
+
+[ERREUR 10] : 12:40:11 - Erreur d'ouverture de flux de données.
+
+[ERREUR 10] : 12:40:35 - Erreur d'ouverture de flux de données.
+
+[ÉTAT] : 12:41:22 - Le programme s'est éteint.
+
+[ÉTAT] : 12:41:24 - Le programme à démarré.
+
+[ERREUR 30] : 12:41:26 - Le fichier ./alarmes/LOW.wav est introuvable.
+
+[ERREUR 30] : 12:41:32 - Le fichier ./alarmes/HIGH.wav est introuvable.
+
+[ERREUR 30] : 12:41:38 - Le fichier ./alarmes/ALERT.wav est introuvable.
+
+[ERREUR 30] : 12:41:56 - Le fichier ./alarmes/LOW.wav est introuvable.
+
+[ÉTAT] : 12:43:21 - Le programme à démarré.
+
+[ÉTAT] : 12:45:34 - Le programme s'est éteint.
+
+[ERREUR 31] : 12:45:36 - Lancement de l'application impossible !
+Fichier de paramètres non trouvé.
+
+[ÉTAT] : 12:45:44 - Le programme à démarré.
+
+[ÉTAT] : 12:46:27 - Le programme à démarré.
+
+[ÉTAT] : 12:48:05 - Le programme à démarré.
+
+[ERREUR 10] : 12:48:42 - Erreur d'ouverture de flux de données.
+
+[ERREUR 10] : 12:48:55 - Erreur d'ouverture de flux de données.
+
+[ÉTAT] : 12:49:39 - Le programme s'est éteint.
+
+[ÉTAT] : 12:49:41 - Le programme à démarré.
+
+[ERREUR 10] : 12:49:42 - Erreur d'ouverture de flux de données.
+
+[ERREUR 10] : 12:49:53 - Erreur d'ouverture de flux de données.
+
+[ERREUR 10] : 12:49:55 - Erreur d'ouverture de flux de données.
+
+[ERREUR 10] : 12:49:59 - Erreur d'ouverture de flux de données.
+
+[ÉTAT] : 12:50:06 - Le programme s'est éteint.
+
+[ÉTAT] : 12:50:08 - Le programme à démarré.
+
+[ERREUR 10] : 12:50:09 - Erreur d'ouverture de flux de données.
+
+[ERREUR 10] : 12:50:12 - Erreur d'ouverture de flux de données.
+
+[ERREUR 10] : 12:50:16 - Erreur d'ouverture de flux de données.
+
+[ERREUR 10] : 12:50:26 - Erreur d'ouverture de flux de données.
+
+[ÉTAT] : 12:50:28 - Le programme s'est éteint.
+
+[ÉTAT] : 12:50:30 - Le programme à démarré.
+12:50:36 ---------------- >  Alerte URGENTE détectée < ----------------  
+
+[ERREUR 13] : 12:50:49 - Erreur lors de la lecture des données.
+
+[ERREUR 13] : 12:50:54 - Erreur lors de la lecture des données.
+
+[ÉTAT] : 12:51:51 - Le programme s'est éteint.
+
+[ERREUR 12] : 12:51:51 - Flux de lecture de données manquant.
+
+[ÉTAT] : 12:52:32 - Le programme à démarré.
+
+[ERREUR 10] : 12:52:35 - Erreur d'ouverture de flux de données.
+
+[ÉTAT] : 12:52:45 - Le programme s'est éteint.
+
+[ÉTAT] : 12:52:48 - Le programme à démarré.
+
+[ERREUR 13] : 12:53:13 - Erreur lors de la lecture des données.
+
+[ÉTAT] : 12:53:18 - Le programme s'est éteint.
+
+[ERREUR 12] : 12:53:18 - Flux de lecture de données manquant.
+
+[ÉTAT] : 12:55:40 - Le programme à démarré.
+
+[ERREUR 10] : 12:55:43 - Erreur d'ouverture de flux de données.
+
+[ÉTAT] : 12:55:46 - Le programme s'est éteint.
+
+[ÉTAT] : 12:55:57 - Le programme à démarré.
+
+[ERREUR 13] : 12:56:03 - Erreur lors de la lecture des données.
+
+[ERREUR 13] : 12:56:14 - Erreur lors de la lecture des données.
+
+[ÉTAT] : 12:56:19 - Le programme s'est éteint.
+
+[ÉTAT] : 12:56:29 - Le programme à démarré.
+
+[ERREUR 13] : 12:56:39 - Erreur lors de la lecture des données.
+
+[ÉTAT] : 12:56:43 - Le programme s'est éteint.
+
+[ÉTAT] : 13:04:37 - Le programme à démarré.
+
+[ERREUR 10] : 13:04:39 - Erreur d'ouverture de flux de données.
+
+[ÉTAT] : 13:11:52 - Le programme s'est éteint.

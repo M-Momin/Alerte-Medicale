@@ -46,3 +46,5 @@ def alert(title, msg_btn, image_path=None, msg_alert="Alerte détectée..."):
     state_label_alert.place(x=200, y=185)
 
     root.wait_window()
+
+

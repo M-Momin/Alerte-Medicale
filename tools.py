@@ -6,6 +6,7 @@ import datetime
 
 import logs
 import sys
+import error
 
 def play_sound(sound_path):
     try:
@@ -13,9 +14,11 @@ def play_sound(sound_path):
         mixer.music.load(sound_path)
         mixer.music.play()
     except pygame.error:
-        print("[ERREUR 30]: Le fichier "+ sound_path + " est introuvable.\n")
         message = "\n" + "[ERREUR 30] : " + datetime.datetime.now().strftime("%H:%M:%S") + " - Le fichier "+ sound_path + " est introuvable."
         logs.write_daily_log(message)
+        error_title = "[ERREUR 30]"
+        error_message = "Le fichier "+ sound_path + " est introuvable.\n"
+        error.error_pop_up(error_title, error_message, False)
 
 def read_params():
     try:
@@ -24,10 +27,11 @@ def read_params():
             lignes = file.readlines()
     except FileNotFoundError :
         clear()
-        print("[ERREUR 31]: Lancement de l'application impossible !\nFichier de paramètres non trouvé.\n")
         message = "\n" + "[ERREUR 31] : " + datetime.datetime.now().strftime("%H:%M:%S") + " - Lancement de l'application impossible !\nFichier de paramètres non trouvé."
         logs.write_daily_log(message)
-        sys.exit(1)
+        error_title = "[ERREUR 31]"
+        error_message = "Lancement de l'application impossible !\nFichier de paramètres non trouvé.\n"
+        error.error_pop_up(error_title, error_message)
     else:
         # Initialisation d'un dictionnaire pour stocker les valeurs de chaque variable globale
         variables_globales = {}
@@ -43,14 +47,20 @@ def read_params():
         return variables_globales
 
 def open_folder(path):
-    if platform.system() == "Windows":
-        os.startfile(path)
+    try:
+        if platform.system() == "Windows":
+            os.startfile(path)
 
-    if platform.system() == "Linux":
-        os.system(f"xdg-open {path}")
+        if platform.system() == "Linux":
+            os.system(f"xdg-open {path}")
+    except:
+        error_title = "[ERREUR 31]"
+        error_message = "Fichiers des paramètres non trouvé.\n"
+        error.error_pop_up(error_title, error_message)
 
 def clear():
     if platform.system() == "Windows":
         os.system('cls')
     if platform.system() == "Linux":
         os.system('clear')
+

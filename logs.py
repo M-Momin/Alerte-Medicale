@@ -2,6 +2,8 @@ import datetime
 import os
 import sys
 
+import error
+
 log_directory = "./logs"
 
 def create_daily_log():
@@ -12,8 +14,10 @@ def create_daily_log():
             with open(log_path, 'w') as log_file:
                 log_file.write(f"Log file for {today}\n")
         except FileNotFoundError:
-            print("[ERREUR 20]: Le dossier d'historique est introuvable.\nChemin par défaut : ./logs")
-            sys.exit(1)
+            error_title = "[ERREUR 20]"
+            error_message = "Le dossier d'historique est introuvable.\nChemin par défaut : ./logs"
+            error.error_pop_up(error_title, error_message)
+
 
 
 def write_daily_log(message):
@@ -29,5 +33,7 @@ def write_daily_log(message):
             # écrire le message dans le fichier, suivi d'un retour à la ligne
             f.write(message + "\n")
     except FileNotFoundError:
-        print("[ERREUR 21]: Impossible d'enregistrer l'historique.\n")
-        sys.exit(1)
+        error_title = "[ERREUR 21]"
+        error_message = "Impossible d'enregistrer l'historique."
+        error.error_pop_up(error_title, error_message)
+

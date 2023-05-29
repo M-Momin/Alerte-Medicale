@@ -2,9 +2,7 @@ import tkinter as tk
 from tkinter import *
 from tkinter import messagebox
 from PIL import Image, ImageTk
-import sound_detector
-import logs
-import tools
+
 import threading
 import os
 import sys
@@ -13,6 +11,12 @@ import platform
 import datetime
 import pyaudio
 import struct
+
+import sound_detector
+import logs
+import tools
+import error
+import notification
 
 #Appel à la fonction tools.read_params permettant la récupération des paramètres contenu dans le fichier 'params.txt'.
 variables_globales = tools.read_params()
@@ -26,7 +30,6 @@ tools.clear()
 
 sample_format = pyaudio.paInt16
 
-
 '''
 Enregistrement des paramètres dans les variables globales.
 
@@ -37,38 +40,46 @@ En cas d'erreur :
 try:
     channels = int(variables_globales['channels'])
 except ValueError:
-    print("[ERREUR 00]: Impossible de démarrer l'application :\nLa valeur par défaut de 'channels' doit être de type 'int' !\n\nValeur par défaut : 1\nValeur actuelle : " + variables_globales['channels'])
-    sys.exit(1)
+    error_title = "[ERREUR 00]"
+    error_message = "Impossible de démarrer l'application :\nLa valeur par défaut de 'channels' doit être de type 'int' !\n\nValeur par défaut : 1\nValeur actuelle : " + variables_globales['channels']
+    #print("[ERREUR 00]: Impossible de démarrer l'application :\nLa valeur par défaut de 'channels' doit être de type 'int' !\n\nValeur par défaut : 1\nValeur actuelle : " + variables_globales['channels'])
+    error.error_pop_up(error_title, error_message)
 try:  
     framerate = int(variables_globales['framerate'])
 except ValueError:
-    print("[ERREUR 01]: Impossible de démarrer l'application :\nLa valeur par défaut de 'framerate' doit être de type 'int' !\n \nValeur par défaut : 7500\nValeur actuelle : " + variables_globales['framerate'])
-    sys.exit(1)
+    error_title = "[ERREUR 01]"
+    error_message = "Impossible de démarrer l'application :\nLa valeur par défaut de 'framerate' doit être de type 'int' !\n \nValeur par défaut : 7500\nValeur actuelle : " + variables_globales['framerate']
+    error.error_pop_up(error_title, error_message)
 try:
     chunk_size = int(variables_globales['chunk_size'])
 except ValueError:
-    print("[ERREUR 02]: Impossible de démarrer l'application :\nLa valeur par défaut de 'chunk_size' doit être de type 'int' ! \n\nValeur par défaut : 256\nValeur actuelle : " + variables_globales['chunk_size'])
-    sys.exit(1)
+    error_title = "[ERREUR 02]"
+    error_message = "Impossible de démarrer l'application :\nLa valeur par défaut de 'chunk_size' doit être de type 'int' ! \n\nValeur par défaut : 256\nValeur actuelle : " + variables_globales['chunk_size']
+    error.error_pop_up(error_title, error_message)
 try:
     threshold = float(variables_globales['threshold'])/1000
 except ValueError:
-    print("[ERREUR 03]: Impossible de démarrer l'application :\nLa valeur par défaut de 'threshold' doit être de type 'int' !\n \nValeur par défaut : 35\nValeur actuelle : " + variables_globales['threshold'])
-    sys.exit(1)
+    error_title = "[ERREUR 03]"
+    error_message = "Impossible de démarrer l'application :\nLa valeur par défaut de 'threshold' doit être de type 'int' !\n \nValeur par défaut : 35\nValeur actuelle : " + variables_globales['threshold']
+    error.error_pop_up(error_title, error_message)
 try:
     target_frequencies_High_SG = eval(variables_globales['target_frequencies_High_SG'])
 except (SyntaxError, NameError):
-    print("[ERREUR 04]: Impossible de démarrer l'application :\nLa valeur par défaut de 'target_frequencies_High_SG' doit être sous forme de 'tableau' !\n \nValeur par défaut : [1312, 1410, 1500, 1619, 1722]\nValeur actuelle : " + variables_globales['target_frequencies_High_SG'])
-    sys.exit(1)
+    error_title = "[ERREUR 04]"
+    error_message = "Impossible de démarrer l'application :\nLa valeur par défaut de 'target_frequencies_High_SG' doit être sous forme de 'tableau' !\n \nValeur par défaut : [1312, 1410, 1500, 1619, 1722]\nValeur actuelle : " + variables_globales['target_frequencies_High_SG']
+    error.error_pop_up(error_title, error_message)
 try:
     target_frequencies_Low_SG = eval(variables_globales['target_frequencies_Low_SG'])
 except (SyntaxError, NameError):
-    print("[ERREUR 05]: Impossible de démarrer l'application :\nLa valeur par défaut de 'target_frequencies_Low_SG' doit être sous forme de 'tableau' !\n \nValeur par défaut : [1722, 1619, 1500, 1410, 1312]\nValeur actuelle : " + variables_globales['target_frequencies_Low_SG'])
-    sys.exit(1)
+    error_title = "[ERREUR 05]"
+    error_message = "Impossible de démarrer l'application :\nLa valeur par défaut de 'target_frequencies_Low_SG' doit être sous forme de 'tableau' !\n \nValeur par défaut : [1722, 1619, 1500, 1410, 1312]\nValeur actuelle : " + variables_globales['target_frequencies_Low_SG']
+    error.error_pop_up(error_title, error_message)
 try:
     target_frequencies_Alert_SG = eval(variables_globales['target_frequencies_Alert_SG'])
 except (SyntaxError, NameError):
-    print("[ERREUR 06]: Impossible de démarrer l'application :\nLa valeur par défaut de 'target_frequencies_Alert_SG' doit être sous forme de 'tableau' !\n \nValeur par défaut : [1655, 3310, 1655, 3310, 1655, 3310]\nValeur actuelle : " + variables_globales['target_frequencies_Alert_SG'])
-    sys.exit(1)
+    error_title = "[ERREUR 06]"
+    error_message = "Impossible de démarrer l'application :\nLa valeur par défaut de 'target_frequencies_Alert_SG' doit être sous forme de 'tableau' !\n \nValeur par défaut : [1655, 3310, 1655, 3310, 1655, 3310]\nValeur actuelle : " + variables_globales['target_frequencies_Alert_SG']
+    error.error_pop_up(error_title, error_message)
 
 
 #Variable permettant l'enregistrement de l'environnement tkinter.
@@ -120,9 +131,12 @@ if __name__ == "__main__":
                                 input=True,
                                 frames_per_buffer=chunk_size)
         except OSError as e:
-            surveillance_off("[ERREUR 10] : Erreur d'ouverture de flux de données.")
             message = "\n" + "[ERREUR 10] : " + datetime.datetime.now().strftime("%H:%M:%S") + " - Erreur d'ouverture de flux de données."
             logs.write_daily_log(message)
+            surveillance_off("[ERREUR 10] : Erreur d'ouverture de flux de données.")
+            error_title = "[ERREUR 10]"
+            error_message = "Erreur d'ouverture de flux de données."
+            error.error_pop_up(error_title, error_message, False)
             first_start = True
             sys.exit(1)
 
@@ -138,9 +152,14 @@ if __name__ == "__main__":
                     try:
                         info = audio.get_default_input_device_info()
                     except OSError as e:
-                        surveillance_off("[ERREUR 11] : Périphérique de lecture manquant.")
+                        if(event_kill.is_set()):
+                            break
                         message = "\n" + "[ERREUR 11] : " + datetime.datetime.now().strftime("%H:%M:%S") + " - Périphérique de lecture manquant."
                         logs.write_daily_log(message)
+                        surveillance_off("[ERREUR 11] : Périphérique de lecture manquant.")
+                        error_title = "[ERREUR 11]"
+                        error_message = "Périphérique de lecture manquant."
+                        error.error_pop_up(error_title, error_message, False)
                     else:
                         print("Micro utilisé : %s" % info['name'])
                         print("Enregistrement en cours...")
@@ -152,9 +171,15 @@ if __name__ == "__main__":
                 try:
                     stream.stop_stream()
                 except (NameError, UnboundLocalError, OSError) as e:
-                    surveillance_off("[ERREUR 12] : Flux de lecture de données manquant.")
+                    if(event_kill.is_set()):
+                        break
                     message = "\n" + "[ERREUR 12] : " + datetime.datetime.now().strftime("%H:%M:%S") + " - Flux de lecture de données manquant."
                     logs.write_daily_log(message)
+                    surveillance_off("[ERREUR 12] : Flux de lecture de données manquant.")
+                    error_title = "[ERREUR 12]"
+                    error_message = "Flux de lecture de données manquant."
+                    error.error_pop_up(error_title, error_message, False)
+
                 else:
                     event_stop.clear()
 
@@ -172,14 +197,23 @@ if __name__ == "__main__":
                 sound_detector.Alert_SG(target_frequencies_Alert_SG, waveform,sample_format,channels, float(threshold), chunk_size, framerate)
 
             except (UnboundLocalError, OSError, struct.error) as e:
+                if(event_kill.is_set()):
+                        break
                 if str(e) == "[Errno -9983] Stream is stopped":
-                    surveillance_off("[ERREUR 13] : Lecture des données stoppée.")
                     message = "\n" + "[ERREUR 13] : " + datetime.datetime.now().strftime("%H:%M:%S") + " - Lecture des données stoppée."
                     logs.write_daily_log(message)
+                    surveillance_off("[ERREUR 13] : Lecture des données stoppée.")                    
+                    error_title = "[ERREUR 13]"
+                    error_message = "Lecture des données stoppée."
+                    error.error_pop_up(error_title, error_message, False)
                 else:
-                    surveillance_off("[ERREUR 13] : Erreur lors de la lecture des données.")
                     message = "\n" + "[ERREUR 13] : " + datetime.datetime.now().strftime("%H:%M:%S") + " - Erreur lors de la lecture des données."
                     logs.write_daily_log(message)
+                    surveillance_off("[ERREUR 13] : Erreur lors de la lecture des données.")
+                    error_title = "[ERREUR 13]"
+                    error_message = "Lecture des données stoppée."
+                    error.error_pop_up(error_title, error_message, False)
+                    
 
                 
             if(not event_kill.is_set()):
