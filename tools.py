@@ -2,17 +2,27 @@ from pygame import mixer
 import pygame
 import platform
 import os
+import threading
 import datetime
 
 import logs
 import sys
 import error
 
+def play_sound_thread(sound_path):
+    # Exécute la commande pour lire le fichier audio
+    os.system("aplay -D hw:3,1 " + sound_path)
+
+
 def play_sound(sound_path):
     try:
-        mixer.init()
-        mixer.music.load(sound_path)
-        mixer.music.play()
+        if platform.system() == "Windows":
+            mixer.init()
+            mixer.music.load(sound_path)
+            mixer.music.play()
+        if platform.system() == "Linux":
+            thread = threading.Thread(target=play_sound_thread, args=(sound_path,))
+            thread.start()
     except pygame.error:
         message = "\n" + "[ERREUR 30] : " + datetime.datetime.now().strftime("%H:%M:%S") + " - Le fichier "+ sound_path + " est introuvable."
         logs.write_daily_log(message)

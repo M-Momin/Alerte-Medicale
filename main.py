@@ -121,28 +121,75 @@ if __name__ == "__main__":
     def long_running_function():
         global first_start
         audio = pyaudio.PyAudio()
+        
+        input_device_index = 3 # Indice du périphérique USB MICROPHONE
+        
 
         # Initialisation de l'enregistrement audio
 
         try:
-            stream = audio.open(format=sample_format,
-                                channels=channels,
-                                rate=framerate,
-                                input=True,
-                                frames_per_buffer=chunk_size)
-        except OSError as e:
-            message = "\n" + "[ERREUR 10] : " + datetime.datetime.now().strftime("%H:%M:%S") + " - Erreur d'ouverture de flux de données."
-            logs.write_daily_log(message)
-            surveillance_off("[ERREUR 10] : Erreur d'ouverture de flux de données.")
-            error_title = "[ERREUR 10]"
-            error_message = "Erreur d'ouverture de flux de données."
-            error.error_pop_up(error_title, error_message, False)
-            first_start = True
-            sys.exit(1)
+            if platform.system() == "Linux":
+                stream = audio.open(format=sample_format,
+                                    channels=channels,
+                                    rate=framerate,
+                                    input=True,
+                                    frames_per_buffer=chunk_size,
+                                    input_device_index=input_device_index)
+            else:
+                stream = audio.open(format=sample_format,
+                    channels=channels,
+                    rate=framerate,
+                    input=True,
+                    frames_per_buffer=chunk_size)
+        except (OSError, Exception) as e:
+            if isinstance(e, Exception):
 
+
+
+                # Obtenez les informations sur le périphérique
+                device_info = audio.get_device_info_by_index(input_device_index)
+
+                # Obtenez les fréquences d'échantillonnage prises en charge
+                supported_sample_rates = []
+                for rate in [8000, 16000, 22050, 44100, 48000]:
+                    try:
+                        stream = audio.open(format=pyaudio.paInt16,
+                                            channels=1,
+                                            rate=rate,
+                                            input=True,
+                                            frames_per_buffer=1024,
+                                            stream_callback=None)
+                        stream.close()
+                        supported_sample_rates.append(rate)
+                    except (OSError, Exception):
+                        pass
+                tools.clear()
+                message = "\n" + "[ERREUR 09] : " + datetime.datetime.now().strftime("%H:%M:%S") + " - Taux d'échantillonnage invalide."
+                logs.write_daily_log(message)
+                surveillance_off("[ERREUR 09] : Taux d'échantillonnage invalide.")
+                print("Erreur : Taux d'échantillonnage invalide. Veuillez utiliser un taux d'échantillonnage valide pour ce périphérique.\n")
+                print(f"Sample Rates supportés par le périphérique: {supported_sample_rates}")
+                error_title = "[ERREUR 09]"
+                error_message = f"Taux d'échantillonnage invalide.\nVeuillez utiliser un taux d'échantillonnage valide pour ce périphérique et redémarrer l'application. \n Sample Rates supportés par le périphérique: {supported_sample_rates}"
+                error.error_pop_up(error_title, error_message, True)
+                first_start = True
+                
+                    
+                
+            else:
+                message = "\n" + "[ERREUR 10] : " + datetime.datetime.now().strftime("%H:%M:%S") + " - Erreur d'ouverture de flux de données."
+                logs.write_daily_log(message)
+                surveillance_off("[ERREUR 10] : Erreur d'ouverture de flux de données.")
+                error_title = "[ERREUR 10]"
+                error_message = "Erreur d'ouverture de flux de données."
+                error.error_pop_up(error_title, error_message, False)
+                first_start = True
+        
 
 
         while True:
+            if(event_kill.is_set()):
+                break
             if event_start.is_set():
                 try:
                     stream.start_stream()
@@ -152,8 +199,6 @@ if __name__ == "__main__":
                     try:
                         info = audio.get_default_input_device_info()
                     except OSError as e:
-                        if(event_kill.is_set()):
-                            break
                         message = "\n" + "[ERREUR 11] : " + datetime.datetime.now().strftime("%H:%M:%S") + " - Périphérique de lecture manquant."
                         logs.write_daily_log(message)
                         surveillance_off("[ERREUR 11] : Périphérique de lecture manquant.")
@@ -184,12 +229,11 @@ if __name__ == "__main__":
                     event_stop.clear()
 
                 
-            if(event_kill.is_set()):
-                break
+
 
             # Lecture des échantillons audio du microphone
             try:
-                data = stream.read(chunk_size)
+                data = stream.read(chunk_size, exception_on_overflow = False)
                 format_string = '<{}h'.format(chunk_size)
                 waveform = struct.unpack(format_string, data)
                 sound_detector.High_SG(target_frequencies_High_SG, waveform,sample_format,channels, float(threshold), chunk_size,framerate)
@@ -197,6 +241,8 @@ if __name__ == "__main__":
                 sound_detector.Alert_SG(target_frequencies_Alert_SG, waveform,sample_format,channels, float(threshold), chunk_size, framerate)
 
             except (UnboundLocalError, OSError, struct.error) as e:
+                print(e)
+                sys.exit(-1)
                 if(event_kill.is_set()):
                         break
                 if str(e) == "[Errno -9983] Stream is stopped":
@@ -235,6 +281,8 @@ if __name__ == "__main__":
     def surveillance_on():
         global first_start
         tools.clear()
+        if platform.system() == "Linux":
+            os.system("sudo systemctl start darkice")
         print("La surveillance est active ! \n\n")
 
         event.set()
@@ -253,6 +301,11 @@ if __name__ == "__main__":
 
     def surveillance_off(error =""):
         tools.clear()
+        if(event_kill.is_set()):
+            event.set()
+
+        if platform.system() == "Linux":
+            os.system("sudo systemctl stop darkice")
 
         if(error != ""):
             print("La surveillance ne peut pas s'activer dû à une erreur : \n" + error + "\n\n  -> Vérifier votre périphérique d'enregistrement \n   ainsi que le paramètre 'channels' et ensuite \n   redémarrez l'application.")
@@ -298,7 +351,7 @@ if __name__ == "__main__":
             event.set()
             root.destroy()
 
-
+    audio = pyaudio.PyAudio()
 
     if platform.system() == "Windows":
         # Création de la fenêtre principale
@@ -311,6 +364,8 @@ if __name__ == "__main__":
         os.system(cmd)
     if platform.system() == "Linux":
         os.system('clear')
+        os.system("sudo modprobe snd-aloop")
+                
 
     print("En attente ...")
 

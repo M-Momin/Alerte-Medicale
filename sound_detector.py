@@ -5,6 +5,7 @@ import datetime
 import logs
 import notification
 
+
 detected_list_High_SG = [];
 last_freq_High_SG = 0;
 detected_list_Low_SG = [];
@@ -51,7 +52,7 @@ def High_SG(target, waveform,sample_format,channels, threshold, chunk_size, fram
             if len(detected_list_High_SG) == len(target):
                 if target == detected_list_High_SG:
                     print(datetime.datetime.now().strftime("%H:%M:%S"),"\n\n              !!!!!!!!!!!! Alerte : HYPER !!!!!!!!!!!!       \n\n")
-                    notification.alert("Alerte HYPER!", "Ok !", "./images/alerte_v2.png", "Une alerte HYPER a été détectée ...")
+                    notification.alert("Alerte HYPER!", "Ok !", "./images/alerte_v2.png", "Une alerte HYPER a été détectée ...", "./alarmes/HIGH.wav")
                     message = datetime.datetime.now().strftime("%H:%M:%S") + " ---------------- >  Alerte HYPER détectée < ---------------- "
                     logs.write_daily_log(message)
                 detected_list_High_SG = detected_list_High_SG[1:]
@@ -82,7 +83,7 @@ def Low_SG(target, waveform, sample_format,channels, threshold, chunk_size, fram
             if len(detected_list_Low_SG) == len(target):
                 if target == detected_list_Low_SG:
                     print(datetime.datetime.now().strftime("%H:%M:%S"),"\n\n              !!!!!!!!!!!! Alerte : HYPO !!!!!!!!!!!!       \n\n")
-                    notification.alert("Alerte HYPO!", "Ok !", "./images/alerte_v2.png", "Une alerte HYPO a été détectée ...")
+                    notification.alert("Alerte HYPO!", "Ok !", "./images/alerte_v2.png", "Une alerte HYPO a été détectée ...", "./alarmes/LOW.wav")
                     message = datetime.datetime.now().strftime("%H:%M:%S") + " ---------------- >  Alerte HYPO détectée < ---------------- "
                     logs.write_daily_log(message)
 

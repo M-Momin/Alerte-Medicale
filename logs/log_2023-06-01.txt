@@ -1,0 +1,92 @@
+Log file for 2023-06-01
+
+[ÉTAT] : 10:20:11 - Le programme à démarré.
+10:22:34 ---------------- >  Alerte URGENTE détectée < ----------------  
+
+[ÉTAT] : 10:22:40 - Le programme s'est éteint.
+
+[ÉTAT] : 10:22:42 - Le programme à démarré.
+
+[ÉTAT] : 10:22:46 - Le programme s'est éteint.
+
+[ÉTAT] : 10:22:48 - Le programme à démarré.
+
+[ÉTAT] : 10:26:08 - Le programme à démarré.
+
+[ÉTAT] : 10:27:10 - Le programme s'est éteint.
+
+[ÉTAT] : 10:27:11 - Le programme à démarré.
+
+[ÉTAT] : 10:29:23 - Le programme s'est éteint.
+
+[ÉTAT] : 10:29:29 - Le programme à démarré.
+
+[ÉTAT] : 10:30:45 - Le programme s'est éteint.
+
+[ÉTAT] : 10:30:52 - Le programme à démarré.
+
+[ÉTAT] : 10:32:02 - Le programme s'est éteint.
+
+[ÉTAT] : 10:32:04 - Le programme à démarré.
+
+[ÉTAT] : 10:33:02 - Le programme s'est éteint.
+
+[ÉTAT] : 10:33:48 - Le programme à démarré.
+
+[ÉTAT] : 10:34:42 - Le programme s'est éteint.
+
+[ÉTAT] : 10:34:46 - Le programme à démarré.
+
+[ÉTAT] : 10:35:19 - Le programme s'est éteint.
+
+[ÉTAT] : 10:35:21 - Le programme à démarré.
+10:35:37 ---------------- >  Alerte URGENTE détectée < ----------------  
+10:35:38 ---------------- >  Alerte URGENTE détectée < ----------------  
+10:35:39 ---------------- >  Alerte URGENTE détectée < ----------------  
+10:35:41 ---------------- >  Alerte URGENTE détectée < ----------------  
+10:35:42 ---------------- >  Alerte URGENTE détectée < ----------------  
+
+[ÉTAT] : 10:37:27 - Le programme s'est éteint.
+
+[ÉTAT] : 10:37:32 - Le programme à démarré.
+10:38:14 ---------------- >  Alerte URGENTE détectée < ----------------  
+10:38:15 ---------------- >  Alerte URGENTE détectée < ----------------  
+10:38:17 ---------------- >  Alerte URGENTE détectée < ----------------  
+
+[ÉTAT] : 10:38:19 - Le programme s'est éteint.
+
+[ÉTAT] : 10:38:53 - Le programme à démarré.
+10:38:56 ---------------- >  Alerte URGENTE détectée < ----------------  
+10:38:59 ---------------- >  Alerte URGENTE détectée < ----------------  
+10:39:00 ---------------- >  Alerte URGENTE détectée < ----------------  
+10:39:01 ---------------- >  Alerte URGENTE détectée < ----------------  
+
+[ÉTAT] : 10:39:02 - Le programme s'est éteint.
+
+[ÉTAT] : 11:19:07 - Le programme à démarré.
+11:19:12 ---------------- >  Alerte URGENTE détectée < ----------------  
+11:19:14 ---------------- >  Alerte URGENTE détectée < ----------------  
+11:19:16 ---------------- >  Alerte URGENTE détectée < ----------------  
+
+[ÉTAT] : 11:19:57 - Le programme s'est éteint.
+
+[ÉTAT] : 11:19:59 - Le programme à démarré.
+11:22:07 ---------------- >  Alerte HYPER détectée < ---------------- 
+
+[ÉTAT] : 11:22:13 - Le programme s'est éteint.
+
+[ÉTAT] : 16:45:22 - Le programme à démarré.
+
+[ERREUR 09] : 16:45:48 - Taux d'échantillonnage invalide.
+
+[ÉTAT] : 16:48:23 - Le programme s'est éteint.
+
+[ÉTAT] : 16:48:28 - Le programme à démarré.
+16:48:34 ---------------- >  Alerte URGENTE détectée < ----------------  
+16:48:36 ---------------- >  Alerte URGENTE détectée < ----------------  
+16:48:37 ---------------- >  Alerte URGENTE détectée < ----------------  
+16:48:38 ---------------- >  Alerte URGENTE détectée < ----------------  
+16:48:45 ---------------- >  Alerte URGENTE détectée < ----------------  
+16:55:32 ---------------- >  Alerte HYPER détectée < ---------------- 
+
+[ÉTAT] : 17:07:02 - Le programme s'est éteint.
