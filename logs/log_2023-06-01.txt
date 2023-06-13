@@ -1,92 +1,440 @@
 Log file for 2023-06-01
 
-[�TAT] : 10:20:11 - Le programme � d�marr�.
-10:22:34 ---------------- >  Alerte URGENTE d�tect�e < ----------------  
+[ÉTAT] : 09:08:30 - Le programme à démarré.
 
-[�TAT] : 10:22:40 - Le programme s'est �teint.
+[ERREUR 10] : 09:09:36 - Erreur d'ouverture de flux de données.
 
-[�TAT] : 10:22:42 - Le programme � d�marr�.
+[ERREUR 10] : 09:11:03 - Erreur d'ouverture de flux de données.
 
-[�TAT] : 10:22:46 - Le programme s'est �teint.
+[ERREUR 10] : 09:11:22 - Erreur d'ouverture de flux de données.
 
-[�TAT] : 10:22:48 - Le programme � d�marr�.
+[ÉTAT] : 09:20:45 - Le programme à démarré.
 
-[�TAT] : 10:26:08 - Le programme � d�marr�.
+[ÉTAT] : 09:22:34 - Le programme s'est éteint.
 
-[�TAT] : 10:27:10 - Le programme s'est �teint.
+[ÉTAT] : 09:23:09 - Le programme à démarré.
 
-[�TAT] : 10:27:11 - Le programme � d�marr�.
+[ÉTAT] : 09:24:05 - Le programme à démarré.
 
-[�TAT] : 10:29:23 - Le programme s'est �teint.
+[ERREUR 10] : 09:24:08 - Erreur d'ouverture de flux de données.
 
-[�TAT] : 10:29:29 - Le programme � d�marr�.
+[ÉTAT] : 09:25:23 - Le programme s'est éteint.
 
-[�TAT] : 10:30:45 - Le programme s'est �teint.
+[ÉTAT] : 09:25:28 - Le programme à démarré.
 
-[�TAT] : 10:30:52 - Le programme � d�marr�.
+[ERREUR 13] : 09:25:30 - Erreur lors de la lecture des données.
 
-[�TAT] : 10:32:02 - Le programme s'est �teint.
+[ÉTAT] : 09:26:02 - Le programme s'est éteint.
 
-[�TAT] : 10:32:04 - Le programme � d�marr�.
+[ÉTAT] : 09:26:05 - Le programme à démarré.
 
-[�TAT] : 10:33:02 - Le programme s'est �teint.
+[ÉTAT] : 09:27:10 - Le programme à démarré.
 
-[�TAT] : 10:33:48 - Le programme � d�marr�.
+[ÉTAT] : 09:27:47 - Le programme s'est éteint.
 
-[�TAT] : 10:34:42 - Le programme s'est �teint.
+[ÉTAT] : 09:27:52 - Le programme à démarré.
 
-[�TAT] : 10:34:46 - Le programme � d�marr�.
+[ERREUR 13] : 09:27:54 - Erreur lors de la lecture des données.
 
-[�TAT] : 10:35:19 - Le programme s'est �teint.
+[ÉTAT] : 09:28:15 - Le programme s'est éteint.
 
-[�TAT] : 10:35:21 - Le programme � d�marr�.
-10:35:37 ---------------- >  Alerte URGENTE d�tect�e < ----------------  
-10:35:38 ---------------- >  Alerte URGENTE d�tect�e < ----------------  
-10:35:39 ---------------- >  Alerte URGENTE d�tect�e < ----------------  
-10:35:41 ---------------- >  Alerte URGENTE d�tect�e < ----------------  
-10:35:42 ---------------- >  Alerte URGENTE d�tect�e < ----------------  
+[ÉTAT] : 09:30:01 - Le programme à démarré.
 
-[�TAT] : 10:37:27 - Le programme s'est �teint.
+[ÉTAT] : 09:31:19 - Le programme à démarré.
 
-[�TAT] : 10:37:32 - Le programme � d�marr�.
-10:38:14 ---------------- >  Alerte URGENTE d�tect�e < ----------------  
-10:38:15 ---------------- >  Alerte URGENTE d�tect�e < ----------------  
-10:38:17 ---------------- >  Alerte URGENTE d�tect�e < ----------------  
+[ÉTAT] : 09:32:29 - Le programme à démarré.
 
-[�TAT] : 10:38:19 - Le programme s'est �teint.
+[ÉTAT] : 09:33:32 - Le programme à démarré.
 
-[�TAT] : 10:38:53 - Le programme � d�marr�.
-10:38:56 ---------------- >  Alerte URGENTE d�tect�e < ----------------  
-10:38:59 ---------------- >  Alerte URGENTE d�tect�e < ----------------  
-10:39:00 ---------------- >  Alerte URGENTE d�tect�e < ----------------  
-10:39:01 ---------------- >  Alerte URGENTE d�tect�e < ----------------  
+[ÉTAT] : 09:34:31 - Le programme s'est éteint.
 
-[�TAT] : 10:39:02 - Le programme s'est �teint.
+[ÉTAT] : 09:34:35 - Le programme à démarré.
 
-[�TAT] : 11:19:07 - Le programme � d�marr�.
-11:19:12 ---------------- >  Alerte URGENTE d�tect�e < ----------------  
-11:19:14 ---------------- >  Alerte URGENTE d�tect�e < ----------------  
-11:19:16 ---------------- >  Alerte URGENTE d�tect�e < ----------------  
+[ÉTAT] : 09:35:42 - Le programme à démarré.
 
-[�TAT] : 11:19:57 - Le programme s'est �teint.
+[ÉTAT] : 09:36:42 - Le programme à démarré.
 
-[�TAT] : 11:19:59 - Le programme � d�marr�.
-11:22:07 ---------------- >  Alerte HYPER d�tect�e < ---------------- 
+[ÉTAT] : 09:38:21 - Le programme à démarré.
 
-[�TAT] : 11:22:13 - Le programme s'est �teint.
+[ÉTAT] : 09:38:48 - Le programme s'est éteint.
 
-[�TAT] : 16:45:22 - Le programme � d�marr�.
+[ÉTAT] : 09:39:10 - Le programme à démarré.
 
-[ERREUR 09] : 16:45:48 - Taux d'�chantillonnage invalide.
+[ÉTAT] : 09:39:37 - Le programme s'est éteint.
 
-[�TAT] : 16:48:23 - Le programme s'est �teint.
+[ÉTAT] : 09:39:40 - Le programme à démarré.
 
-[�TAT] : 16:48:28 - Le programme � d�marr�.
-16:48:34 ---------------- >  Alerte URGENTE d�tect�e < ----------------  
-16:48:36 ---------------- >  Alerte URGENTE d�tect�e < ----------------  
-16:48:37 ---------------- >  Alerte URGENTE d�tect�e < ----------------  
-16:48:38 ---------------- >  Alerte URGENTE d�tect�e < ----------------  
-16:48:45 ---------------- >  Alerte URGENTE d�tect�e < ----------------  
-16:55:32 ---------------- >  Alerte HYPER d�tect�e < ---------------- 
+[ÉTAT] : 09:40:12 - Le programme s'est éteint.
 
-[�TAT] : 17:07:02 - Le programme s'est �teint.
+[ÉTAT] : 09:40:14 - Le programme à démarré.
+
+[ÉTAT] : 09:42:52 - Le programme à démarré.
+
+[ÉTAT] : 09:43:29 - Le programme s'est éteint.
+
+[ÉTAT] : 09:43:32 - Le programme à démarré.
+
+[ÉTAT] : 09:43:45 - Le programme s'est éteint.
+
+[ÉTAT] : 09:44:17 - Le programme à démarré.
+
+[ÉTAT] : 09:46:40 - Le programme à démarré.
+
+[ÉTAT] : 09:48:18 - Le programme à démarré.
+
+[ÉTAT] : 09:48:38 - Le programme s'est éteint.
+
+[ÉTAT] : 09:48:44 - Le programme à démarré.
+
+[ÉTAT] : 09:49:50 - Le programme s'est éteint.
+
+[ÉTAT] : 09:49:52 - Le programme à démarré.
+
+[ÉTAT] : 09:50:41 - Le programme s'est éteint.
+
+[ÉTAT] : 09:51:50 - Le programme à démarré.
+
+[ÉTAT] : 09:52:58 - Le programme s'est éteint.
+
+[ÉTAT] : 09:53:02 - Le programme à démarré.
+
+[ÉTAT] : 09:54:25 - Le programme s'est éteint.
+
+[ÉTAT] : 09:54:35 - Le programme à démarré.
+
+[ÉTAT] : 09:55:50 - Le programme à démarré.
+
+[ÉTAT] : 09:56:37 - Le programme à démarré.
+09:57:02 ---------------- >  Alerte URGENTE détectée < ----------------  
+
+[ÉTAT] : 10:02:25 - Le programme à démarré.
+
+[ÉTAT] : 10:03:39 - Le programme à démarré.
+
+[ÉTAT] : 10:06:46 - Le programme à démarré.
+10:07:26 ---------------- >  Alerte URGENTE détectée < ----------------  
+
+[ÉTAT] : 10:07:38 - Le programme s'est éteint.
+
+[ÉTAT] : 10:08:14 - Le programme à démarré.
+
+[ÉTAT] : 10:09:18 - Le programme à démarré.
+
+[ÉTAT] : 10:11:11 - Le programme s'est éteint.
+
+[ÉTAT] : 10:11:14 - Le programme à démarré.
+
+[ÉTAT] : 10:13:16 - Le programme s'est éteint.
+
+[ÉTAT] : 10:13:19 - Le programme à démarré.
+
+[ÉTAT] : 10:16:31 - Le programme à démarré.
+
+[ERREUR 10] : 10:16:33 - Erreur d'ouverture de flux de données.
+
+[ÉTAT] : 10:16:40 - Le programme s'est éteint.
+
+[ÉTAT] : 10:16:52 - Le programme à démarré.
+
+[ÉTAT] : 10:42:20 - Le programme s'est éteint.
+
+[ÉTAT] : 10:42:35 - Le programme à démarré.
+
+[ÉTAT] : 10:43:49 - Le programme s'est éteint.
+
+[ÉTAT] : 10:43:53 - Le programme à démarré.
+
+[ÉTAT] : 10:46:55 - Le programme s'est éteint.
+
+[ÉTAT] : 10:47:07 - Le programme à démarré.
+
+[ÉTAT] : 10:48:31 - Le programme s'est éteint.
+
+[ÉTAT] : 10:48:40 - Le programme à démarré.
+10:49:04 ---------------- >  Alerte HYPER détectée < ---------------- 
+10:49:23 ---------------- >  Alerte HYPER détectée < ---------------- 
+10:49:27 ---------------- >  Alerte URGENTE détectée < ----------------  
+10:49:30 ---------------- >  Alerte URGENTE détectée < ----------------  
+10:49:34 ---------------- >  Alerte HYPER détectée < ---------------- 
+10:49:38 ---------------- >  Alerte URGENTE détectée < ----------------  
+10:49:45 ---------------- >  Alerte HYPER détectée < ---------------- 
+10:49:48 ---------------- >  Alerte HYPER détectée < ---------------- 
+10:49:51 ---------------- >  Alerte HYPER détectée < ---------------- 
+10:50:02 ---------------- >  Alerte HYPER détectée < ---------------- 
+
+[ÉTAT] : 10:50:18 - Le programme s'est éteint.
+
+[ÉTAT] : 10:54:12 - Le programme à démarré.
+10:54:43 ---------------- >  Alerte HYPO détectée < ---------------- 
+10:54:48 ---------------- >  Alerte HYPO détectée < ---------------- 
+10:55:10 ---------------- >  Alerte HYPER détectée < ---------------- 
+
+[ÉTAT] : 11:10:28 - Le programme s'est éteint.
+
+[ÉTAT] : 11:10:32 - Le programme à démarré.
+11:11:28 ---------------- >  Alerte HYPER détectée < ---------------- 
+
+[ÉTAT] : 11:16:11 - Le programme s'est éteint.
+
+[ÉTAT] : 11:16:13 - Le programme à démarré.
+11:16:55 ---------------- >  Alerte HYPER détectée < ---------------- 
+
+[ÉTAT] : 11:17:45 - Le programme s'est éteint.
+
+[ÉTAT] : 11:31:24 - Le programme à démarré.
+11:32:53 ---------------- >  Alerte URGENTE détectée < ----------------  
+11:45:15 ---------------- >  Alerte URGENTE détectée < ----------------  
+11:45:30 ---------------- >  Alerte URGENTE détectée < ----------------  
+11:45:48 ---------------- >  Alerte URGENTE détectée < ----------------  
+11:46:03 ---------------- >  Alerte URGENTE détectée < ----------------  
+11:46:08 ---------------- >  Alerte URGENTE détectée < ----------------  
+11:46:28 ---------------- >  Alerte URGENTE détectée < ----------------  
+11:46:33 ---------------- >  Alerte URGENTE détectée < ----------------  
+11:49:31 ---------------- >  Alerte HYPO détectée < ---------------- 
+
+[ÉTAT] : 11:50:01 - Le programme s'est éteint.
+
+[ÉTAT] : 15:05:04 - Le programme à démarré.
+
+[ÉTAT] : 15:05:48 - Le programme s'est éteint.
+
+[ÉTAT] : 15:05:58 - Le programme à démarré.
+
+[ERREUR 10] : 15:06:32 - Erreur d'ouverture de flux de données.
+
+[ÉTAT] : 15:06:40 - Le programme s'est éteint.
+
+[ÉTAT] : 15:09:18 - Le programme à démarré.
+
+[ÉTAT] : 15:09:49 - Le programme à démarré.
+
+[ÉTAT] : 15:11:19 - Le programme s'est éteint.
+
+[ÉTAT] : 15:11:36 - Le programme à démarré.
+
+[ÉTAT] : 15:11:58 - Le programme à démarré.
+15:13:51 ---------------- >  Alerte URGENTE détectée < ----------------  
+15:13:59 ---------------- >  Alerte URGENTE détectée < ----------------  
+15:14:35 ---------------- >  Alerte HYPER détectée < ---------------- 
+15:15:07 ---------------- >  Alerte HYPER détectée < ---------------- 
+15:15:21 ---------------- >  Alerte URGENTE détectée < ----------------  
+
+[ÉTAT] : 15:15:58 - Le programme s'est éteint.
+
+[ÉTAT] : 15:16:02 - Le programme à démarré.
+
+[ERREUR 10] : 15:16:07 - Erreur d'ouverture de flux de données.
+
+[ÉTAT] : 15:17:22 - Le programme s'est éteint.
+
+[ÉTAT] : 15:17:27 - Le programme à démarré.
+
+[ÉTAT] : 15:17:50 - Le programme s'est éteint.
+
+[ÉTAT] : 15:17:53 - Le programme à démarré.
+
+[ÉTAT] : 15:19:37 - Le programme s'est éteint.
+
+[ÉTAT] : 15:19:52 - Le programme à démarré.
+
+[ÉTAT] : 15:21:22 - Le programme à démarré.
+
+[ÉTAT] : 15:23:59 - Le programme à démarré.
+
+[ÉTAT] : 15:24:24 - Le programme s'est éteint.
+
+[ÉTAT] : 15:25:19 - Le programme à démarré.
+
+[ÉTAT] : 15:25:49 - Le programme s'est éteint.
+
+[ÉTAT] : 15:25:53 - Le programme à démarré.
+
+[ÉTAT] : 15:28:34 - Le programme s'est éteint.
+
+[ÉTAT] : 15:28:38 - Le programme à démarré.
+
+[ÉTAT] : 15:31:03 - Le programme à démarré.
+
+[ÉTAT] : 15:31:28 - Le programme s'est éteint.
+
+[ÉTAT] : 15:31:33 - Le programme à démarré.
+
+[ÉTAT] : 15:34:14 - Le programme à démarré.
+
+[ÉTAT] : 15:34:37 - Le programme s'est éteint.
+
+[ÉTAT] : 15:34:40 - Le programme à démarré.
+
+[ÉTAT] : 15:39:16 - Le programme à démarré.
+
+[ÉTAT] : 15:40:30 - Le programme s'est éteint.
+
+[ÉTAT] : 15:40:33 - Le programme à démarré.
+
+[ÉTAT] : 15:47:08 - Le programme à démarré.
+
+[ÉTAT] : 15:49:21 - Le programme à démarré.
+
+[ÉTAT] : 15:50:24 - Le programme s'est éteint.
+
+[ÉTAT] : 15:50:37 - Le programme à démarré.
+
+[ÉTAT] : 15:51:13 - Le programme s'est éteint.
+
+[ÉTAT] : 15:51:18 - Le programme à démarré.
+
+[ÉTAT] : 15:54:22 - Le programme s'est éteint.
+
+[ÉTAT] : 15:54:25 - Le programme à démarré.
+
+[ÉTAT] : 15:55:39 - Le programme s'est éteint.
+
+[ÉTAT] : 15:55:43 - Le programme à démarré.
+
+[ÉTAT] : 15:56:49 - Le programme s'est éteint.
+
+[ÉTAT] : 15:57:35 - Le programme à démarré.
+
+[ÉTAT] : 15:59:09 - Le programme s'est éteint.
+
+[ÉTAT] : 16:00:21 - Le programme à démarré.
+
+[ERREUR 09] : 16:00:23 - Taux d'échantillonnage invalide.
+
+[ÉTAT] : 16:01:44 - Le programme s'est éteint.
+
+[ÉTAT] : 16:01:48 - Le programme à démarré.
+
+[ERREUR 09] : 16:01:50 - Taux d'échantillonnage invalide.
+
+[ÉTAT] : 16:02:03 - Le programme s'est éteint.
+
+[ÉTAT] : 16:03:14 - Le programme à démarré.
+
+[ERREUR 09] : 16:03:18 - Taux d'échantillonnage invalide.
+
+[ÉTAT] : 16:05:38 - Le programme s'est éteint.
+
+[ÉTAT] : 16:06:09 - Le programme à démarré.
+
+[ERREUR 09] : 16:06:12 - Taux d'échantillonnage invalide.
+
+[ÉTAT] : 16:06:49 - Le programme à démarré.
+
+[ERREUR 09] : 16:06:51 - Taux d'échantillonnage invalide.
+
+[ÉTAT] : 16:08:30 - Le programme à démarré.
+
+[ERREUR 09] : 16:08:33 - Taux d'échantillonnage invalide.
+
+[ÉTAT] : 16:09:01 - Le programme à démarré.
+
+[ERREUR 09] : 16:09:04 - Taux d'échantillonnage invalide.
+
+[ÉTAT] : 16:11:25 - Le programme s'est éteint.
+
+[ÉTAT] : 16:11:28 - Le programme à démarré.
+
+[ERREUR 09] : 16:11:30 - Taux d'échantillonnage invalide.
+
+[ÉTAT] : 16:12:20 - Le programme s'est éteint.
+
+[ÉTAT] : 16:12:23 - Le programme à démarré.
+
+[ERREUR 09] : 16:12:25 - Taux d'échantillonnage invalide.
+
+[ÉTAT] : 16:14:52 - Le programme s'est éteint.
+
+[ÉTAT] : 16:14:55 - Le programme à démarré.
+
+[ERREUR 09] : 16:14:57 - Taux d'échantillonnage invalide.
+
+[ÉTAT] : 16:16:03 - Le programme s'est éteint.
+
+[ÉTAT] : 16:16:06 - Le programme à démarré.
+
+[ERREUR 09] : 16:16:08 - Taux d'échantillonnage invalide.
+
+[ÉTAT] : 16:16:29 - Le programme s'est éteint.
+
+[ÉTAT] : 16:16:32 - Le programme à démarré.
+
+[ERREUR 09] : 16:16:34 - Taux d'échantillonnage invalide.
+
+[ÉTAT] : 16:17:52 - Le programme s'est éteint.
+
+[ÉTAT] : 16:18:43 - Le programme à démarré.
+
+[ÉTAT] : 16:19:40 - Le programme s'est éteint.
+
+[ÉTAT] : 16:19:43 - Le programme à démarré.
+
+[ERREUR 09] : 16:19:45 - Taux d'échantillonnage invalide.
+
+[ÉTAT] : 16:19:51 - Le programme s'est éteint.
+
+[ÉTAT] : 16:20:01 - Le programme à démarré.
+16:20:22 ---------------- >  Alerte URGENTE détectée < ----------------  
+16:20:25 ---------------- >  Alerte URGENTE détectée < ----------------  
+16:21:41 ---------------- >  Alerte HYPER détectée < ---------------- 
+16:21:52 ---------------- >  Alerte HYPER détectée < ---------------- 
+16:21:56 ---------------- >  Alerte HYPER détectée < ---------------- 
+16:22:01 ---------------- >  Alerte HYPER détectée < ---------------- 
+16:22:04 ---------------- >  Alerte HYPER détectée < ---------------- 
+
+[ÉTAT] : 16:22:27 - Le programme s'est éteint.
+
+[ÉTAT] : 16:22:30 - Le programme à démarré.
+
+[ERREUR 09] : 16:22:38 - Taux d'échantillonnage invalide.
+
+[ÉTAT] : 16:24:36 - Le programme s'est éteint.
+
+[ÉTAT] : 16:24:57 - Le programme à démarré.
+
+[ÉTAT] : 16:28:15 - Le programme s'est éteint.
+
+[ÉTAT] : 16:29:44 - Le programme à démarré.
+
+[ÉTAT] : 16:33:40 - Le programme s'est éteint.
+
+[ÉTAT] : 16:33:43 - Le programme à démarré.
+
+[ÉTAT] : 16:34:11 - Le programme s'est éteint.
+
+[ÉTAT] : 16:34:14 - Le programme à démarré.
+16:35:09 ---------------- >  Alerte HYPER détectée < ---------------- 
+16:35:27 ---------------- >  Alerte HYPER détectée < ---------------- 
+16:36:14 ---------------- >  Alerte HYPER détectée < ---------------- 
+16:36:23 ---------------- >  Alerte URGENTE détectée < ----------------  
+16:36:26 ---------------- >  Alerte URGENTE détectée < ----------------  
+16:36:30 ---------------- >  Alerte URGENTE détectée < ----------------  
+
+[ÉTAT] : 16:36:38 - Le programme s'est éteint.
+
+[ÉTAT] : 16:43:31 - Le programme à démarré.
+
+[ÉTAT] : 16:43:52 - Le programme s'est éteint.
+
+[ÉTAT] : 16:52:24 - Le programme à démarré.
+16:54:02 ---------------- >  Alerte URGENTE détectée < ----------------  
+16:54:05 ---------------- >  Alerte URGENTE détectée < ----------------  
+16:54:12 ---------------- >  Alerte URGENTE détectée < ----------------  
+16:54:17 ---------------- >  Alerte URGENTE détectée < ----------------  
+16:58:49 ---------------- >  Alerte URGENTE détectée < ----------------  
+16:58:54 ---------------- >  Alerte URGENTE détectée < ----------------  
+16:59:10 ---------------- >  Alerte URGENTE détectée < ----------------  
+17:00:37 ---------------- >  Alerte URGENTE détectée < ----------------  
+17:01:12 ---------------- >  Alerte HYPO détectée < ---------------- 
+17:01:23 ---------------- >  Alerte URGENTE détectée < ----------------  
+17:01:27 ---------------- >  Alerte HYPO détectée < ---------------- 
+17:01:35 ---------------- >  Alerte URGENTE détectée < ----------------  
+17:01:40 ---------------- >  Alerte URGENTE détectée < ----------------  
+17:01:45 ---------------- >  Alerte URGENTE détectée < ----------------  
+
+[ÉTAT] : 17:01:59 - Le programme s'est éteint.
+
+[ÉTAT] : 17:05:46 - Le programme à démarré.
+17:06:18 ---------------- >  Alerte URGENTE détectée < ----------------  
+
+[ÉTAT] : 17:06:36 - Le programme s'est éteint.

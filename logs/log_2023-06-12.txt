@@ -1,0 +1,91 @@
+Log file for 2023-06-12
+
+[ÉTAT] : 09:51:49 - Le programme à démarré.
+
+[ÉTAT] : 09:54:46 - Le programme s'est éteint.
+
+[ÉTAT] : 10:02:24 - Le programme à démarré.
+
+[ÉTAT] : 10:03:13 - Le programme s'est éteint.
+
+[ÉTAT] : 10:03:16 - Le programme à démarré.
+
+[ÉTAT] : 10:03:32 - Le programme s'est éteint.
+
+[ÉTAT] : 10:04:31 - Le programme à démarré.
+
+[ÉTAT] : 10:06:35 - Le programme à démarré.
+
+[ÉTAT] : 10:07:16 - Le programme s'est éteint.
+
+[ÉTAT] : 10:07:18 - Le programme à démarré.
+
+[ÉTAT] : 10:07:43 - Le programme s'est éteint.
+
+[ÉTAT] : 10:07:56 - Le programme à démarré.
+
+[ÉTAT] : 10:08:35 - Le programme s'est éteint.
+
+[ÉTAT] : 10:08:38 - Le programme à démarré.
+
+[ERREUR 09] : 10:08:41 - Taux d'échantillonnage invalide.
+
+[ÉTAT] : 10:09:13 - Le programme s'est éteint.
+
+[ÉTAT] : 10:09:20 - Le programme à démarré.
+10:11:09 ---------------- >  Alerte URGENTE détectée < ----------------  
+
+[ÉTAT] : 10:13:01 - Le programme s'est éteint.
+
+[ÉTAT] : 10:13:04 - Le programme à démarré.
+
+[ÉTAT] : 10:14:51 - Le programme s'est éteint.
+
+[ÉTAT] : 10:15:15 - Le programme à démarré.
+10:16:11 ---------------- >  Alerte HYPO détectée < ---------------- 
+10:16:13 ---------------- >  Alerte HYPO détectée < ---------------- 
+10:16:16 ---------------- >  Alerte HYPO détectée < ---------------- 
+10:16:24 ---------------- >  Alerte HYPO détectée < ---------------- 
+10:16:26 ---------------- >  Alerte HYPO détectée < ---------------- 
+10:16:32 ---------------- >  Alerte HYPO détectée < ---------------- 
+10:16:42 ---------------- >  Alerte HYPO détectée < ---------------- 
+10:16:45 ---------------- >  Alerte HYPO détectée < ---------------- 
+10:17:26 ---------------- >  Alerte HYPER détectée < ---------------- 
+10:17:28 ---------------- >  Alerte HYPER détectée < ---------------- 
+10:17:34 ---------------- >  Alerte HYPER détectée < ---------------- 
+10:17:38 ---------------- >  Alerte HYPER détectée < ---------------- 
+10:17:40 ---------------- >  Alerte HYPER détectée < ---------------- 
+10:17:43 ---------------- >  Alerte HYPER détectée < ---------------- 
+10:17:45 ---------------- >  Alerte HYPER détectée < ---------------- 
+10:17:52 ---------------- >  Alerte HYPER détectée < ---------------- 
+10:17:55 ---------------- >  Alerte HYPER détectée < ---------------- 
+10:18:07 ---------------- >  Alerte HYPER détectée < ---------------- 
+10:18:12 ---------------- >  Alerte HYPER détectée < ---------------- 
+10:18:40 ---------------- >  Alerte URGENTE détectée < ----------------  
+10:18:48 ---------------- >  Alerte URGENTE détectée < ----------------  
+10:18:50 ---------------- >  Alerte URGENTE détectée < ----------------  
+10:18:53 ---------------- >  Alerte URGENTE détectée < ----------------  
+10:18:57 ---------------- >  Alerte URGENTE détectée < ----------------  
+10:18:58 ---------------- >  Alerte URGENTE détectée < ----------------  
+10:19:00 ---------------- >  Alerte URGENTE détectée < ----------------  
+10:19:02 ---------------- >  Alerte URGENTE détectée < ----------------  
+10:19:05 ---------------- >  Alerte URGENTE détectée < ----------------  
+
+[ÉTAT] : 10:20:16 - Le programme s'est éteint.
+
+[ÉTAT] : 10:29:42 - Le programme à démarré.
+10:31:33 ---------------- >  Alerte URGENTE détectée < ----------------  
+10:31:51 ---------------- >  Alerte URGENTE détectée < ----------------  
+10:32:10 ---------------- >  Alerte URGENTE détectée < ----------------  
+10:32:12 ---------------- >  Alerte URGENTE détectée < ----------------  
+10:32:34 ---------------- >  Alerte URGENTE détectée < ----------------  
+10:32:36 ---------------- >  Alerte URGENTE détectée < ----------------  
+10:32:39 ---------------- >  Alerte URGENTE détectée < ----------------  
+
+[ÉTAT] : 10:33:15 - Le programme s'est éteint.
+
+[ÉTAT] : 10:42:40 - Le programme à démarré.
+10:44:25 ---------------- >  Alerte HYPO détectée < ---------------- 
+10:44:31 ---------------- >  Alerte HYPO détectée < ---------------- 
+
+[ÉTAT] : 10:44:39 - Le programme s'est éteint.

@@ -122,7 +122,7 @@ if __name__ == "__main__":
         global first_start
         audio = pyaudio.PyAudio()
         
-        input_device_index = 3 # Indice du périphérique USB MICROPHONE
+        input_device_index = 2# Indice du périphérique USB MICROPHONE
         
 
         # Initialisation de l'enregistrement audio
@@ -130,11 +130,11 @@ if __name__ == "__main__":
         try:
             if platform.system() == "Linux":
                 stream = audio.open(format=sample_format,
-                                    channels=channels,
+                                    channels=1,
                                     rate=framerate,
                                     input=True,
-                                    frames_per_buffer=chunk_size,
-                                    input_device_index=input_device_index)
+                                    frames_per_buffer=chunk_size)
+                                    #input_device_index=input_device_index)
             else:
                 stream = audio.open(format=sample_format,
                     channels=channels,
@@ -143,9 +143,7 @@ if __name__ == "__main__":
                     frames_per_buffer=chunk_size)
         except (OSError, Exception) as e:
             if isinstance(e, Exception):
-
-
-
+                
                 # Obtenez les informations sur le périphérique
                 device_info = audio.get_device_info_by_index(input_device_index)
 

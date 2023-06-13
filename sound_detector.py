@@ -115,7 +115,7 @@ def Alert_SG(target, waveform, sample_format,channels, threshold, chunk_size, fr
             if len(detected_list_Alert_SG) == len(target):
                 if target == detected_list_Alert_SG:
                     print(datetime.datetime.now().strftime("%H:%M:%S"),"\n\n              !!!!!!!!!!!! Alerte : URGENCE !!!!!!!!!!!!       \n\n")
-                    notification.alert("Alerte URGENTE!", "Ok !", "./images/alerte_v2.png", "Une alerte URGENTE a été détectée ...")
+                    notification.alert("Alerte URGENTE!", "Ok !", "./images/alerte_v2.png", "Une alerte URGENTE a été détectée ...", "./alarmes/ALERT.wav")
                     message = datetime.datetime.now().strftime("%H:%M:%S") + " ---------------- >  Alerte URGENTE détectée < ----------------  "
                     logs.write_daily_log(message)
 

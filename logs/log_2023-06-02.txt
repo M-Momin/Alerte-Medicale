@@ -1,0 +1,13 @@
+Log file for 2023-06-02
+
+[ÉTAT] : 11:05:19 - Le programme à démarré.
+
+[ÉTAT] : 11:07:01 - Le programme à démarré.
+
+[ERREUR 09] : 11:07:11 - Taux d'échantillonnage invalide.
+
+[ÉTAT] : 11:07:43 - Le programme s'est éteint.
+
+[ÉTAT] : 11:07:49 - Le programme à démarré.
+
+[ÉTAT] : 11:39:06 - Le programme s'est éteint.
