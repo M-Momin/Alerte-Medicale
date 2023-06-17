@@ -28,10 +28,38 @@ class BlinkingLabel(tk.Label):
 
 
 def play_sound_in_loop(sound_path, stop_event):
+    """
+    Joue un son en boucle jusqu'à ce que l'événement d'arrêt soit défini.
+
+    Cette fonction utilise la commande système `aplay` pour jouer le son situé à l'emplacement spécifié en boucle.
+    Le son est joué en utilisant le périphérique audio spécifié ("hw:3,1") qui le périphérique de loopback créé.
+
+    La fonction continue de jouer le son en boucle jusqu'à ce que l'événement d'arrêt (`stop_event`) soit défini.
+    Lorsque l'événement d'arrêt est défini, la lecture du son s'arrête.
+
+    Args:
+        sound_path (str): Le chemin vers le fichier son à jouer.
+        stop_event (threading.Event): L'événement d'arrêt pour contrôler la détection.
+    """
+
     while not stop_event.is_set():
         os.system("aplay -D hw:3,1 " + sound_path)
         
 def alert(title, msg_btn, image_path=None, msg_alert="Alerte détectée...", sound_path=None):
+    """
+    Affiche une fenêtre d'alerte avec un message et une option pour arrêter une notification sonore.
+
+    Cette fonction crée une fenêtre d'alerte avec un titre spécifié et un message d'alerte.
+    Elle peut également afficher une image en option et jouer une notification sonore en boucle.
+
+    Args:
+        title (str): Le titre de la fenêtre d'alerte.
+        msg_btn (str): Le texte du bouton pour fermer la fenêtre d'alerte.
+        image_path (str, optional): Le chemin vers une image à afficher dans la fenêtre d'alerte. Par défaut None.
+        msg_alert (str, optional): Le message d'alerte à afficher dans la fenêtre d'alerte. Par défaut "Alerte détectée...".
+        sound_path (str, optional): Le chemin vers un fichier audio à jouer en boucle lors de l'affichage de l'alerte. Par défaut None.
+    """
+    
     global event_kill
 
     if sound_path:

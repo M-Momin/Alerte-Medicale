@@ -15,6 +15,20 @@ def play_sound_thread(sound_path):
 
 
 def play_sound(sound_path):
+    """
+    Joue un fichier audio.
+
+    Cette fonction joue le fichier audio spécifié par `sound_path` en utilisant les fonctionnalités appropriées en fonction du système d'exploitation.
+    Si le système d'exploitation est Windows, la fonction `mixer.music` de la bibliothèque `pygame` est utilisée pour jouer le son.
+    Si le système d'exploitation est Linux, un thread est créé pour exécuter la fonction `play_sound_thread` qui joue le son à l'aide de la commande système appropriée.
+
+    Args:
+        sound_path (str): Chemin vers le fichier audio à jouer.
+
+    Raises:
+        Exception: Si une erreur se produit lors de la lecture du fichier audio.
+    """
+
     try:
         if platform.system() == "Windows":
             mixer.init()
@@ -31,6 +45,20 @@ def play_sound(sound_path):
         error.error_pop_up(error_title, error_message, False)
 
 def read_params():
+    """
+    Lit les paramètres à partir d'un fichier texte et les stocke dans un dictionnaire.
+
+    Cette fonction lit le fichier `params.txt` qui contient les paramètres sous la forme de lignes contenant des noms de variables et leurs valeurs.
+    Chaque ligne est analysée pour extraire le nom et la valeur de chaque variable, puis ces valeurs sont stockées dans un dictionnaire.
+    Si le fichier `params.txt` n'est pas trouvé, une erreur est affichée.
+
+    Returns:
+        dict: Dictionnaire contenant les valeurs de chaque variable globale.
+
+    Raises:
+        FileNotFoundError: Si le fichier `params.txt` n'est pas trouvé.
+    """
+    
     try:
         with open('params.txt', 'r') as file:
             # Lecture des lignes du fichier
@@ -57,6 +85,20 @@ def read_params():
         return variables_globales
 
 def open_folder(path):
+    """
+    Ouvre un dossier à l'emplacement spécifié.
+
+    Cette fonction ouvre le dossier situé à l'emplacement `path` en utilisant les commandes système appropriées en fonction du système d'exploitation.
+    Si le système d'exploitation est Windows, la fonction `os.startfile` est utilisée pour ouvrir le dossier.
+    Si le système d'exploitation est Linux, la fonction `os.system` est utilisée avec la commande `xdg-open` pour ouvrir le dossier.
+
+    Args:
+        path (str): Chemin vers le dossier à ouvrir.
+
+    Raises:
+        Exception: Si une erreur se produit lors de l'ouverture du dossier.
+    """
+
     try:
         if platform.system() == "Windows":
             os.startfile(path)

@@ -18,6 +18,25 @@ detected_list = [];
 
 # Fonction pour calculer la corrélation entre deux formes d'onde
 def calculate_correlation(waveform1, waveform2):
+    """
+    Calcule la corrélation entre deux formes d'onde.
+
+    Cette fonction calcule la corrélation entre deux formes d'onde en utilisant la méthode de corrélation croisée.
+
+    Args:
+        waveform1 (list): Liste des valeurs de la première forme d'onde.
+        waveform2 (list): Liste des valeurs de la deuxième forme d'onde.
+
+    Returns:
+        float: Valeur de corrélation normalisée entre -1.0 et 1.0.
+
+    Exemple:
+        waveform1 = [0.1, 0.2, 0.3, 0.4, 0.5]
+        waveform2 = [0.2, 0.3, 0.4, 0.5, 0.6]
+        correlation = calculate_correlation(waveform1, waveform2)
+        print(correlation)
+        # Résultat: 0.9999999999999998
+    """
     sum_xy = 0
     sum_x2 = 0
     sum_y2 = 0
@@ -28,7 +47,26 @@ def calculate_correlation(waveform1, waveform2):
     correlation = sum_xy / math.sqrt(sum_x2 * sum_y2)
     return correlation
 
+
 def High_SG(target, waveform,sample_format,channels, threshold, chunk_size, framerate):
+    """
+    Effectue la détection des fréquences dans une forme d'onde donnée pour les signaux de haute fréquence.
+
+    Cette fonction compare la forme d'onde donnée avec une liste de fréquences cibles pour détecter la fréquence dominante correspondante.
+    La corrélation est calculée entre la forme d'onde et chaque fréquence cible, et la fréquence avec la corrélation maximale est détectée.
+    Si la corrélation dépasse le seuil donné, la fréquence détectée est affichée, et si toutes les fréquences cibles sont détectées dans l'ordre,
+    une alerte "HYPER" est déclenchée.
+
+    Args:
+        target (list): Liste des fréquences cibles à détecter.
+        waveform (list): Forme d'onde à analyser sous forme de liste de valeurs d'amplitude.
+        sample_format (int): Format d'échantillonage des valeurs d'amplitude.
+        channels (int): Nombre de canaux audio.
+        threshold (float): Seuil de corrélation pour la détection de fréquence.
+        chunk_size (int): Taille de chaque chunk de la forme d'onde pour le calcul de corrélation.
+        framerate (int): Taux d'échantillonnage de la forme d'onde.
+    """
+    
     global detected_list_High_SG
     global last_freq_High_SG
     # Calcul de la corrélation entre la forme d'onde et chaque fréquence cible
@@ -60,7 +98,24 @@ def High_SG(target, waveform,sample_format,channels, threshold, chunk_size, fram
 
 
 def Low_SG(target, waveform, sample_format,channels, threshold, chunk_size, framerate):
-    # Calcul de la corrélation entre la forme d'onde et chaque fréquence cible
+    """
+    Effectue la détection des fréquences dans une forme d'onde donnée pour les signaux de basse fréquence.
+
+    Cette fonction compare la forme d'onde donnée avec une liste de fréquences cibles pour détecter la fréquence dominante correspondante.
+    La corrélation est calculée entre la forme d'onde et chaque fréquence cible, et la fréquence avec la corrélation maximale est détectée.
+    Si la corrélation dépasse le seuil donné, la fréquence détectée est affichée, et si toutes les fréquences cibles sont détectées dans l'ordre,
+    une alerte "HYPO" est déclenchée.
+
+    Args:
+        target (list): Liste des fréquences cibles à détecter.
+        waveform (list): Forme d'onde à analyser sous forme de liste de valeurs d'amplitude.
+        sample_format (int): Format d'échantillonage des valeurs d'amplitude.
+        channels (int): Nombre de canaux audio.
+        threshold (float): Seuil de corrélation pour la détection de fréquence.
+        chunk_size (int): Taille de chaque chunk de la forme d'onde pour le calcul de corrélation.
+        framerate (int): Taux d'échantillonnage de la forme d'onde.
+    """
+
     global detected_list_Low_SG
     global last_freq_Low_SG
     correlations = []
@@ -91,7 +146,24 @@ def Low_SG(target, waveform, sample_format,channels, threshold, chunk_size, fram
 
 
 def Alert_SG(target, waveform, sample_format,channels, threshold, chunk_size, framerate):
-    # Calcul de la corrélation entre la forme d'onde et chaque fréquence cible
+    """
+    Effectue la détection des fréquences dans une forme d'onde donnée pour les signaux d'alerte.
+
+    Cette fonction compare la forme d'onde donnée avec une liste de fréquences cibles pour détecter la fréquence dominante correspondante.
+    La corrélation est calculée entre la forme d'onde et chaque fréquence cible, et la fréquence avec la corrélation maximale est détectée.
+    Si la corrélation dépasse le seuil donné, la fréquence détectée est affichée, et si toutes les fréquences cibles sont détectées dans l'ordre,
+    une alerte "URGENCE" est déclenchée.
+
+    Args:
+        target (list): Liste des fréquences cibles à détecter.
+        waveform (list): Forme d'onde à analyser sous forme de liste de valeurs d'amplitude.
+        sample_format (int): Format d'échantillonage des valeurs d'amplitude.
+        channels (int): Nombre de canaux audio.
+        threshold (float): Seuil de corrélation pour la détection de fréquence.
+        chunk_size (int): Taille de chaque chunk de la forme d'onde pour le calcul de corrélation.
+        framerate (int): Taux d'échantillonnage de la forme d'onde.
+    """
+
     global detected_list_Alert_SG
     global last_freq_Alert_SG
     correlations = []

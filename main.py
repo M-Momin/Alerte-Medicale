@@ -118,23 +118,32 @@ if __name__ == "__main__":
     logs.write_daily_log(message)
 
 
+# ------------------------------- Fonction Thread n°2 ------------------------------- #
     def long_running_function():
+        """
+        Effectue un enregistrement audio en continu à partir d'un périphérique d'enregistrement spécifié.
+        
+        Returns:
+            int: Un entier indiquant la fin de la fonction.
+        """
+
+
         global first_start
         audio = pyaudio.PyAudio()
         
-        input_device_index = 2# Indice du périphérique USB MICROPHONE
+        # Indice du périphérique d'enregistrement
+        input_device_index = 2 
         
 
         # Initialisation de l'enregistrement audio
-
         try:
             if platform.system() == "Linux":
                 stream = audio.open(format=sample_format,
                                     channels=1,
                                     rate=framerate,
                                     input=True,
-                                    frames_per_buffer=chunk_size)
-                                    #input_device_index=input_device_index)
+                                    frames_per_buffer=chunk_size,
+                                    input_device_index=input_device_index)
             else:
                 stream = audio.open(format=sample_format,
                     channels=channels,
@@ -185,6 +194,7 @@ if __name__ == "__main__":
         
 
 
+        #Boucle principal du thread. 
         while True:
             if(event_kill.is_set()):
                 break
@@ -195,7 +205,7 @@ if __name__ == "__main__":
                     pass
                 else:
                     try:
-                        info = audio.get_default_input_device_info()
+                        info = audio.get_device_info_by_index(input_device_index)
                     except OSError as e:
                         message = "\n" + "[ERREUR 11] : " + datetime.datetime.now().strftime("%H:%M:%S") + " - Périphérique de lecture manquant."
                         logs.write_daily_log(message)
@@ -229,7 +239,7 @@ if __name__ == "__main__":
                 
 
 
-            # Lecture des échantillons audio du microphone
+            # Lecture des échantillons audio du microphone et appel des algorithme de corrélations.
             try:
                 data = stream.read(chunk_size, exception_on_overflow = False)
                 format_string = '<{}h'.format(chunk_size)
@@ -259,7 +269,7 @@ if __name__ == "__main__":
                     error.error_pop_up(error_title, error_message, False)
                     
 
-                
+            #Condition de mise en pause si la surveillance n'est pas "set"   
             if(not event_kill.is_set()):
                 event.wait()
             else:
@@ -274,9 +284,15 @@ if __name__ == "__main__":
             pass
 
         return 0
+# /////////////////////////////////////////////////////////////////////////////////// #
 
+
+# ------------------------------- Fonctions Surveillance ------------------------------- #
     # Définition de la fonction à exécuter lorsque le bouton est cliqué
     def surveillance_on():
+        """
+        Active la surveillance en démarrant l'enregistrement audio et en settant l'événement start.
+        """
         global first_start
         tools.clear()
         if platform.system() == "Linux":
@@ -296,8 +312,14 @@ if __name__ == "__main__":
         surveillance_btn.configure(text = "Désactivé\nSurveillance  ", command=surveillance_off)
         state_label.configure(text="✔️ Surveillance ON", fg="green", bg="#d6f5d6")
 
-
+    # Définition de la fonction à exécuter lorsque le bouton est cliqué     
     def surveillance_off(error =""):
+        """
+        Désactive la surveillance en arrêtant l'enregistrement audio et en settant l'évènement stop.
+        
+        Args:
+            error (str): Message d'erreur facultatif à afficher en cas d'impossibilité d'activer la surveillance.
+        """
         tools.clear()
         if(event_kill.is_set()):
             event.set()
@@ -321,14 +343,27 @@ if __name__ == "__main__":
         except RuntimeError:
             pass
 
-        
-        
-
     def set_threshold_value(new_value):
+        """
+        Définit la valeur de seuil de détection du son.
+
+        Args:
+            new_value (int): Nouvelle valeur de seuil en millisecondes.
+        """
         global threshold
         threshold = int(new_value)/1000
+# ///////////////////////////////////////////////////////////////////////////////////// #
 
+
+# ------------------------------- Fonctions Graphique ------------------------------- #
     def quitWin():
+        """
+        Gère l'action de quitter l'application.
+
+        Cette fonction affiche une boîte de dialogue demandant à l'utilisateur s'il souhaite quitter l'application. 
+        Si l'utilisateur confirme la demande de fermeture, l'application s'éteint. Sinon, si l'utilisateur annule, 
+        l'application continue à s'exécuter. Si une erreur se produit lors de la boîte de dialogue, un message d'erreur est affiché.
+        """
         res = messagebox.askyesno('Quitter ?', 'Voulez-vous quitter l\'application?') 
         if res == True:
             message = '\n' + "[ÉTAT] : " + datetime.datetime.now().strftime("%H:%M:%S") + " - Le programme s'est éteint."
@@ -342,15 +377,28 @@ if __name__ == "__main__":
             messagebox.showerror('error', 'Un problème est survenu!')
 
     def on_closing():
+        """
+        Gère l'événement de fermeture de la fenêtre principale de l'application.
+
+        Cette fonction est appelée lorsque l'utilisateur tente de fermer la fenêtre principale de l'application.
+        Elle affiche une boîte de dialogue demandant à l'utilisateur s'il souhaite vraiment quitter l'application.
+        Si l'utilisateur confirme la demande de fermeture, l'application s'éteint en déclenchant les actions nécessaires
+        pour arrêter les processus en cours. Si l'utilisateur annule la demande, la fenêtre principale reste ouverte et 
+        l'application continue à s'exécuter normalement.
+        """
         if messagebox.askokcancel("Quit", "Voulez-vous vraiment quitter ?"):
             message = '\n' + "[ÉTAT] : " + datetime.datetime.now().strftime("%H:%M:%S") + " - Le programme s'est éteint."
             logs.write_daily_log(message)
             event_kill.set()
             event.set()
             root.destroy()
+# ///////////////////////////////////////////////////////////////////////////////////// #
 
+# ------------------------------- Paramètres générales de l'application ------------------------------- #
+    # initialisation de PyAudio
     audio = pyaudio.PyAudio()
 
+    # initialisation de la console
     if platform.system() == "Windows":
         # Création de la fenêtre principale
         os.system('cls')
@@ -362,42 +410,38 @@ if __name__ == "__main__":
         os.system(cmd)
     if platform.system() == "Linux":
         os.system('clear')
-        os.system("sudo modprobe snd-aloop")
-                
-
+        os.system("sudo modprobe snd-aloop")           
     print("En attente ...")
 
 
-
+    # Création de la page graphique principale
     root = tk.Tk()
 
     root.title("Alerte Médicale !")
     root.geometry('875x585')
     root.resizable(0, 0)
-    # Définition de la fonction à exécuter dans une nouvelle thread
 
-
+    # Initialisation des paramètres généraux
     background_image = tk.PhotoImage(file="./images/bg_1.png")
     background_label = tk.Label(root, image=background_image)
     background_label.place(relwidth=1, relheight=1)
 
+    # Label de surveillance
     state_label = Label(root, text="❌Surveillance OFF", width=20, height=2, font=("Helvetica", 18), fg="red",activebackground="#ff704d", bg="#ffd6cc")
     state_label.pack()
     state_label.place(x=550, y= 30)
 
 
-    # Chargement de l'image
+    # Partie Surveillance
     image_power = Image.open("./images/power.png")
     image_power = image_power.resize((30, 30)) 
     photo_power = ImageTk.PhotoImage(image_power)
-    # Création du bouton
     surveillance_btn = Button(root, text="Activé\nSurveillance  ", image=photo_power, width=160, height=50, compound="right", font=("Helvetica", 12), command=surveillance_on, highlightcolor="yellow")
-    # Configuration du style personnalisé
     surveillance_btn.configure(bg="#eff5f5", fg="black", borderwidth=1, relief="solid")
-    # Placement du bouton
     surveillance_btn.pack(pady=15)
     surveillance_btn.place(x=300, y=200)
 
+    # Partie Historique
     image_history = Image.open("./images/history.png")
     image_history = image_history.resize((25, 25)) 
     photo_history = ImageTk.PhotoImage(image_history)
@@ -406,6 +450,7 @@ if __name__ == "__main__":
     logs_btn.pack(pady=15)
     logs_btn.place(x=300, y=275)
 
+    # Partie Paramètres
     image_settings = Image.open("./images/settings.png")
     image_settings = image_settings.resize((25, 25)) 
     photo_settings = ImageTk.PhotoImage(image_settings)
@@ -419,24 +464,32 @@ if __name__ == "__main__":
     title_label.pack(pady=10)
     title_label.place(x=700, y=200)
 
+    # Alarme test
     image_volume = Image.open("./images/volume.png")
     image_volume = image_volume.resize((15, 15)) 
     photo_volume = ImageTk.PhotoImage(image_volume)
+
+    # Alarme test Hypo
     test_LOW_btn = Button(root, text="Alarme Hypo   ", width=120, height=30, font=("Helvetica", 10),compound="right", image=photo_volume, command=lambda: tools.play_sound('./alarmes/LOW.wav'))
     test_LOW_btn.configure(bg="#eff5f5", fg="black", borderwidth=1, relief="solid")
     test_LOW_btn.pack(pady=15)
     test_LOW_btn.place(x=700, y=240)
 
+
+    # Alarme test Hyper
     test_HIGH_btn = Button(root, text="Alarme Hyper   ", width=120, height=30, font=("Helvetica", 10),compound="right", image=photo_volume, command=lambda: tools.play_sound('./alarmes/HIGH.wav'))
     test_HIGH_btn.configure(bg="#eff5f5", fg="black", borderwidth=1, relief="solid")
     test_HIGH_btn.pack(pady=15)
     test_HIGH_btn.place(x=700, y=290)
 
+
+    # Alarme test Alert
     test_ALERT_btn = Button(root, text="Alarme Alerte   ", width=120, height=30, font=("Helvetica", 10),compound="right", image=photo_volume, command=lambda: tools.play_sound('./alarmes/ALERT.wav'))
     test_ALERT_btn.configure(bg="#eff5f5", fg="black", borderwidth=1, relief="solid")
     test_ALERT_btn.pack(pady=15)
     test_ALERT_btn.place(x=700, y=340)
 
+    # Partie quitter
     image_quit = Image.open("./images/quit.png")
     image_quit = image_quit.resize((15, 15)) 
     photo_quit = ImageTk.PhotoImage(image_quit)
@@ -446,9 +499,8 @@ if __name__ == "__main__":
     quit_btn.place(x=750, y=525)
 
 
-    # Créer le curseur
+    # Partie sensibilité
     threshold_scale = tk.Scale(root, from_=1, to=100, resolution=1,  orient=tk.HORIZONTAL, command=set_threshold_value, label="Sensibilité :", bg="#eff5f5")
-    # Afficher le curseur
     threshold_scale.set(threshold*1000)
     threshold_scale.pack()
     threshold_scale.place(x=510, y=200)
@@ -458,4 +510,4 @@ if __name__ == "__main__":
     root_send = root
 
     root.mainloop()
-
+# ////////////////////////////////////////////////////////////////////////////////////////////////////// #
